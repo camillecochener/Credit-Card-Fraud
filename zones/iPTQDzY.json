@@ -3,10 +3,6 @@
   "color": "#087ABF",
   "items": [
     {
-      "objectId": "merchant_info",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "transactions_joined",
       "objectType": "DATASET"
     },
@@ -24,18 +20,6 @@
     },
     {
       "objectId": "transactions_2018_copy",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2018",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2017",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "cardholder_info",
       "objectType": "DATASET"
     },
     {

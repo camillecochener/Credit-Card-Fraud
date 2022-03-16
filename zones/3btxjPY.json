@@ -1,7 +1,24 @@
 {
   "name": "Data Collection",
   "color": "#D03713",
-  "items": [],
+  "items": [
+    {
+      "objectId": "merchant_info",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_2017",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_2018",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "cardholder_info",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
