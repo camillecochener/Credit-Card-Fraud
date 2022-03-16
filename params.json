@@ -215,11 +215,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 12,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647442793579
+    "lastModifiedOn": 1647442811536
   },
   "creationTag": {
     "versionNumber": 0,
@@ -230,7 +230,8 @@
   },
   "shortDesc": "The aim of the project is to predict credit card fraud using past transactions history.",
   "tags": [
-    "imported"
+    "demo",
+    "fraud detection"
   ],
   "customFields": {},
   "checklists": {
