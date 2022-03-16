@@ -7,44 +7,12 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "merchant_info_copy",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "compute_transactions_joined",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "cardholder_info_copy",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2018_copy",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "compute_cardholder_info_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_transactions_2018_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_transactions_2017_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_merchant_info_copy",
       "objectType": "RECIPE"
     },
     {
       "objectId": "compute_transactions_stacked",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "transactions_2017_copy",
-      "objectType": "DATASET"
     },
     {
       "objectId": "transactions_stacked",
