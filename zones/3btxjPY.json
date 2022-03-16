@@ -1,56 +1,7 @@
 {
   "name": "Data Collection",
   "color": "#D03713",
-  "items": [
-    {
-      "objectId": "merchant_info",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2017",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2018",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "cardholder_info",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "compute_merchant_info_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_transactions_2017_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_transactions_2018_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_cardholder_info_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "merchant_info_copy",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2017_copy",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "transactions_2018_copy",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "cardholder_info_copy",
-      "objectType": "DATASET"
-    }
-  ],
+  "items": [],
   "shared": [],
   "tags": [],
   "customFields": {},
