@@ -102,6 +102,7 @@
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
+        "maxRecordsForDisplay": -1,
         "maxStoredBytes": 104857600,
         "timeout": -1,
         "filter": {
@@ -124,6 +125,24 @@
       "_refreshTrigger": 0
     },
     "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
@@ -253,9 +272,25 @@
         "fillOpacity": 0.6,
         "showXAxisLabel": true,
         "showYAxisLabel": true,
+        "displayXAxis": true,
+        "displayYAxis": true,
         "hexbinRadius": 20,
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
         "chartHeight": 200,
         "singleXAxis": true,
         "multiTooltips": false,
@@ -276,7 +311,10 @@
           "paletteType": "CONTINUOUS",
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
-          "paletteMiddleValue": 0.0
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
         },
         "bubblesOptions": {
           "defaultRadius": 5.0,
@@ -300,6 +338,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAABORJREFUeF7tmk9sFFUcx3+/t22aoFVmtitaREVTbyIE2wDGEPXgubSNfxKjh1KihoSEqokRxX9chIPRGFh70NR40erFiyZalkPFxLgU4gE8QDw00u7OtDWKBPf9zEw76WOd7p8wkXm//fW20zdv3/f7+X1/82ZmEeSPtQPIWp2IAwHMvAgEsABm7gBzeZJgAczcAebyJMECmLkDzOVJggUwcweYy5MEC2DmDjCXJwkWwMwdYC5PEiyAmTvAXJ4kWAAzd4C5PElwDOC5EXd/Lu8dmd3tHLrlI/8Vm2tAAFfRW3yhM3v5Svuz0eEAtAC22YGqtQfpNQ8JYEZwAykCmBlQU87MSPeadvj7OUkwU8jV6Q1ktmOlsPbYwk+2SpZNlkEuDnDlUvvRW8cv/imAbXWgDmDZZDEAG0gojbjvEcBvcXJshiwteploeY/7rib4XQAzSawpo3TAeYcuoldDWm8u7z1ho/SWSLBXcI8SwK8RIN2/ggrbKKN3QxvO4eVaAG1t0+wB+wV3QgNMmfBMwLQFHsPt8A3M1s6nAE5p/yoXrn70GCzzqgQ/CaPkwOFagBeBxu7J+wsplVhzWawTHAfXBKw2U7/egV+FDq2SYFuTG1FnC7h83D0GCOfiyjtKMPbSEPXi56sBnu/wPuh5H2pem9Oear6AY1rzfzZZzxt4jAQrhF/+qdDMujH/dNoB1lsfC8DlE2uPAKmZemIbAWx7S672gAfgGmmt1aKhKsHc4AbaBXBUAbPQmct7BxvtAraMYwG4dNx5CRErjZoebLLwARqivuUNVri1VpO5Q6WfG53DlnHWAy5POl+DwslmDNf7jCdZRA4h+sGRXNHu31/FeWA14Lm9zotqEHUzcMOwGoCjc9tAzzrF+fFm50r7eGsBz+1dekKlBpu2GPU+oOqzlNY3Z6fnX2t6tpSfYD1gXE+b63mM2/FUNAaJVOVb1OjRXeTihfFhUk8PrHQBbm3aesD14Ia3Cv3UgZnlt0WLcJ/+Ac5E530yDPDMwMosArgRR/+HMVGLbuSr1CbYBvfCyXDsPL2qf8S3TcCPvgkjt09DHgFPdRXL3zUypy1jWiLBYYof0k/hOvUZLNCwPolj4bGtsOfjLXR49G4/72117qhoHJIEp6R0m0kwTqNDQD520EbqxfOZHdRDnRj+ACC7k9+tkYmoNRI8vSQZM7QRD+L58IOGDdmHvZgbppRUcELLaAnAeJoyRFhRb4Wu3Zjd6b2RkH+pn6YlAIcUllOcO8G7JVdXXGsAXoBuuADh60QBnPqms7TARjdZMzfQI91T+P3SRZj6cgX/cUskJrJMaxMcqS9PuPtR0Z1AMFUBuk2RUqYzlz6ENR1X4K9WTG9Y04mUyXWcJACcHVi5rgafzeXc30VdxQNYEsDXEVKSX12ecIOX9n9Ec/ZsADg72nrX3ki/9QmOK47Sl86nSFgM/hcAPvMy3LR+0ns9yUKyZS6WgM02HQAmoF1+n/+gLVCSXCd7wIFZCmGbs8sbStI4W+ZiCTgw30yxuQmzBUxS62QLODDI+8LZ5A7a/+P1a4HNGvC1GMPlXAHMheQqOgSwAGbuAHN5kmABzNwB5vIkwQKYuQPM5UmCBTBzB5jLkwQLYOYOMJcnCRbAzB1gLk8SLICZO8BcniRYADN3gLk8STBzwP8C+F14YN58Ew8AAAAASUVORK5CYII\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
@@ -392,6 +431,7 @@
             "maxValue": 2528.56664981,
             "isA": "filter",
             "excludedValues": {},
+            "isAGlobalFilter": false,
             "explicitExclude": false
           }
         ],
@@ -407,9 +447,25 @@
         "fillOpacity": 0.6,
         "showXAxisLabel": true,
         "showYAxisLabel": true,
+        "displayXAxis": true,
+        "displayYAxis": true,
         "hexbinRadius": 20,
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
         "chartHeight": 200,
         "singleXAxis": true,
         "multiTooltips": false,
@@ -430,7 +486,10 @@
           "paletteType": "CONTINUOUS",
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
-          "paletteMiddleValue": 0.0
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
         },
         "bubblesOptions": {
           "defaultRadius": 5.0,
@@ -615,9 +674,25 @@
         "fillOpacity": 0.6,
         "showXAxisLabel": true,
         "showYAxisLabel": true,
+        "displayXAxis": true,
+        "displayYAxis": true,
         "hexbinRadius": 20,
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
         "chartHeight": 200,
         "singleXAxis": true,
         "multiTooltips": false,
@@ -638,7 +713,10 @@
           "paletteType": "CONTINUOUS",
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
-          "paletteMiddleValue": 0.0
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
         },
         "bubblesOptions": {
           "defaultRadius": 5.0,
@@ -662,7 +740,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAAAAXNSR0IArs4c6QAAAV1JREFUaENjZBhhgBGbf9cdf7GfVuEQZCnhSA2z/9fzkuxGxsbPjqMeBoX+aAxTIw1CzRhN0mQG5mgeJiLgRgstWCCNFlpEJBdilYwWWsSGFJq60UKLiIAbLbRGCy0ikgmpSkYLLVJDDKp+tNAiIuBGC63RQouIZEKqktFCi9QQGy20iA+x0UJrtNAiPrUQpfLqy0/3awPUkohSTEDRkGh4FG44w/Cw02fkjEuPepiCtD2apIkIPLpXS0MqSYMc2x9ggjUcQXIggCy/+Oy9V7HGSmKVW8//avc2ZAPJD3oPwzwC8yXIQzCP33nz5eXR+y8ZLjx9L04oNcH0gdRRo5T+Xy0gz8DydwEhe9Hl8SZpdM+Sajiyeqp7uJ63l4GBwYhUN+H0cP7iixs3XHnMR6qBxKinSgyTMTcMchtODxPj8KGqBuuE+FD1DDHuHvUwMaE0lNWMxvBQjj1i3A4ARJVJOIgOxqQAAAAASUVORK5CYII\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAABK1JREFUeF7tnF1oU2cYx98kx7bpPKmWmqQ1XbR+1G1UM/CznYKzw4AorA6hVw7BG0HUqwobRuZudrWCV164TdkQZGyoyBTFjm3IFBFriyBrJlXTxW7W+lEl9TTveN0yNjE9b+bTx+PLvzeBnif/533+v/d5zgknJz6BP6Md8BldHYoTAGz4JgBgADbcAcPLQwcDsOEOGF4eOhiADXfA8PLQwQBsuAOGl4cOBmDDHTC8PHQwABvugOHlFe3gb84OJIXPiryM9TsBcXLD4nDWi2uXu+yNbOvyBbrHAZztFD6xgG0xhIl8eWfHuy2xS4SSJFIy9UpUCP8hEjE9kQMArGcUSZRMTUkIMfYpiZieiJmAhcx/0tZcd0LPA74oACbyWgp5YP2y2i+I5MhkAJjISgD+x0gzR7R3AdtvCSH2EO1jHRkA1nGJKkam7PeFEHwfk4QAYCp4OjoArOOSRoyHRzQ6WIOfawgAG36RJaTobmuObnfdCcwBGNFUhgNwwUkzL7LQwRjRVLOiJB2M6JLsGifYsyO6aqcQ+dVUZWroYERrmEQWIlOhTiEk5y1YACajpyEEwBomaYV4dkSjg7X4uQYBMD4muW6SCQjAiCY0tW1ZdCWhHIkUAJPY+JcIAD+xwdCraAA2/BwMwABMeDbQlsI5WNsq90BvnoPtLveVk0bgHExqp4uYTAEwmd/oYFxFk20mXSF0sK5TGnHoYMM72An42732CCk6WKMzdUO8+AgpAOvS04gDYMNHNAADsMYcoA3BiCb002sd/AKeDTb7bhIAY0QTzgt3qZeyg8/8kk0nplcHqyvL6txL5I1AB7t08I6vLn+4vCG8qhiW0bH83Y5jF6teD4cym5vnTn86rmdgKP1auCpmWYFydezXofvX1GtDtT1zIlFn7j28HrQsa2rFpG/Xt9R+PZG5StH2XAe/2nG88+1ZYXtdU33DvwtR4EYe5+XP/X+E+ocehNWxPasTv08OWtMKcT0Dw+nPzvfNildPHlwar7mn/n+092ZMve5Ozs+VBfxVT5vjOGO5w903s9FQuVNZZkl1vCczFFw1r3ZUbQp1fPDRaLbODsbVMQUyUlkeKWyggt7Hp3uHW+dEbi+J1/zkpR9i8SRgn5ALVIeuaap3gpbf+rFvMNeVvvUf4MpYBXJLy9xyBU6B2HWyRz567FQ8a4cvqp/W/16ifopfyooLmTs3VMzSeM3sI703rn3fd+uZ3b32jVj68m/DttpQW1c0PpkEe3+4OlOtrf3NhrKjVzIPR3I5a8TJT1Ixi2I119sXxrsAeJzvZKkOVoBLGUMKdKGrOd5XLIdax7YVjd95C3AoKYTsKMUXgtjiN/z/D2CCBZFJfPRO0/6NrfEvyQSfU+gFPFmoVmwu4GRj+OC+TYs/f04uZG/3HOAZO48nhRiLklXILBSxKzPnPmg9xZy2aLq/L7ISvOsJXMIPgvM6zp4NgNkt500IwLx+s2cDYHbLeRMCMK/f7NkAmN1y3oQAzOs3ezYAZrecNyEA8/rNng2A2S3nTQjAvH6zZwNgdst5EwIwr9/s2QCY3XLehADM6zd7NgBmt5w3IQDz+s2eDYDZLedN+CeETVA6QWMKAwAAAABJRU5ErkJggg\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
@@ -812,6 +890,7 @@
             "maxValue": 0.0,
             "isA": "filter",
             "excludedValues": {},
+            "isAGlobalFilter": false,
             "explicitExclude": false
           }
         ],
@@ -827,9 +906,25 @@
         "fillOpacity": 0.6,
         "showXAxisLabel": true,
         "showYAxisLabel": true,
+        "displayXAxis": true,
+        "displayYAxis": true,
         "hexbinRadius": 20,
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
         "chartHeight": 200,
         "singleXAxis": true,
         "multiTooltips": false,
@@ -850,7 +945,10 @@
           "paletteType": "CONTINUOUS",
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
-          "paletteMiddleValue": 0.0
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
         },
         "bubblesOptions": {
           "defaultRadius": 5.0,
@@ -1032,9 +1130,25 @@
         "fillOpacity": 0.6,
         "showXAxisLabel": true,
         "showYAxisLabel": true,
+        "displayXAxis": false,
+        "displayYAxis": true,
         "hexbinRadius": 20,
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
         "chartHeight": 200,
         "singleXAxis": true,
         "multiTooltips": false,
@@ -1055,7 +1169,10 @@
           "paletteType": "CONTINUOUS",
           "quantizationMode": "NONE",
           "numQuantizeSteps": 5,
-          "paletteMiddleValue": 0.0
+          "paletteMiddleValue": 0.0,
+          "customColors": {},
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5
         },
         "bubblesOptions": {
           "defaultRadius": 5.0,
