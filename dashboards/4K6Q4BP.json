@@ -127,14 +127,14 @@
   ],
   "owner": "dataiku-admin",
   "listed": true,
-  "name": "CC Fraud Dashboard",
+  "name": "Credit Card Fraud Analytics",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 27,
+    "versionNumber": 28,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1633940471086
+    "lastModifiedOn": 1647444674557
   },
   "creationTag": {
     "versionNumber": 0,
