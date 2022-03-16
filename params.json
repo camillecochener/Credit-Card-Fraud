@@ -216,11 +216,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 16,
+    "versionNumber": 17,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647442882609
+    "lastModifiedOn": 1647442959663
   },
   "creationTag": {
     "versionNumber": 0,
@@ -229,7 +229,7 @@
     },
     "lastModifiedOn": 1609888961017
   },
-  "description": "The purpose of this project is to detect fraud in banking transactions made with credit cards. ",
+  "description": "The purpose of this project is to detect fraud in banking transactions made with credit cards. \n\nAt our disposal, we have :\n- a history of bank transactions\n- a description of the merchants\n- a description of the credit card holders",
   "shortDesc": "The aim of the project is to predict credit card fraud using past transactions history.",
   "tags": [
     "demo",
