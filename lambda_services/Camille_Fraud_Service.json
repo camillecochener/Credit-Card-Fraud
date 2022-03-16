@@ -1,0 +1,75 @@
+{
+  "name": "Camille_Fraud_Service",
+  "endpoints": [
+    {
+      "modelRef": "HF3317k5",
+      "useJava": true,
+      "outputExplanations": false,
+      "individualExplanationParams": {
+        "method": "ICE",
+        "nbExplanations": 3,
+        "drawInScoredSet": false,
+        "subChunkSize": 5000,
+        "shapleyBackgroundSize": 100
+      },
+      "testQueries": [
+        {
+          "name": "transactions_known #1",
+          "q": {
+            "features": {
+              "transaction_id": 81138,
+              "authorized_flag": 1,
+              "purchase_date": "2017-06-15 10:39:55",
+              "purchase_date_parsed": "2017-06-15T10:39:55.000Z",
+              "purchase_year": 2017,
+              "purchase_month": 6,
+              "purchase_day": 15,
+              "purchase_dow": 4,
+              "purchase_weekend": 0,
+              "purchase_hour": 10,
+              "card_id": "C_ID_9ae6988d92",
+              "merchant_id": "M_ID_309ad8356d",
+              "merchant_category_id": 755,
+              "item_category": "B",
+              "purchase_amount": 582.16,
+              "signature_provided": 0,
+              "card_first_active_month": "2016-03",
+              "card_first_active_month_parsed": "2016-03-01T00:00:00.000Z",
+              "days_active": 471,
+              "card_reward_program": "cash_back",
+              "card_latitude": 42.233,
+              "card_longitude": -71.794,
+              "card_fico_score": 789,
+              "card_age": 49,
+              "merchant_subsector_description": "internet",
+              "merchant_latitude": 42.287,
+              "merchant_longitude": -71.857,
+              "merchant_location": "POINT(-71.857 42.287)",
+              "merchant_state": "Massachusetts",
+              "merchant_state_enName": "Massachusetts",
+              "card_location": "POINT(-71.794 42.233)",
+              "merchant_cardholder_distance": 7.93,
+              "card_state": "Massachusetts",
+              "card_state_enName": "Massachusetts"
+            }
+          }
+        }
+      ],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "returnPostEnrichData": false,
+      "auditPostEnrichData": false,
+      "id": "predict_fraud",
+      "type": "STD_PREDICTION"
+    }
+  ],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

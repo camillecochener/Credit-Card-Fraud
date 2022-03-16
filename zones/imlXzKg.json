@@ -1,0 +1,40 @@
+{
+  "name": "Green Track",
+  "color": "#4B8021",
+  "items": [
+    {
+      "objectId": "split_transactions_joined_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_unknown_scored",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "score_transactions_unknown",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "HF3317k5",
+      "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "train_Random_Forests",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_known",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_unknown",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

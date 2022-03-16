@@ -1,0 +1,44 @@
+{
+  "name": "Purple Track",
+  "color": "#8C2DA7",
+  "items": [
+    {
+      "objectId": "compute_transactions_joined_prepared_filtered",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_reward_value_by_card_id_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_transactions_reward_value_by_card_id_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_reward_value_by_card_id",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_transactions_reward_value_by_card_id",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_reward_value",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_transactions_reward_value",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_joined_prepared_filtered",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

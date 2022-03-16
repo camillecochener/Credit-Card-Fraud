@@ -1,0 +1,24 @@
+{
+  "name": "My project description",
+  "layout": "WIKI_ARTICLE",
+  "attachments": [],
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "camillec"
+    },
+    "lastModifiedOn": 1638983524075
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "camillec"
+    },
+    "lastModifiedOn": 1638983524075
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

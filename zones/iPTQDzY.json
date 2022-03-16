@@ -1,0 +1,84 @@
+{
+  "name": "Initial Data Preparation",
+  "color": "#087ABF",
+  "items": [
+    {
+      "objectId": "merchant_info",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_joined",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "merchant_info_copy",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_transactions_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "cardholder_info_copy",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_2018_copy",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_2018",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_2017",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "cardholder_info",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_cardholder_info_copy",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_transactions_2018_copy",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_transactions_2017_copy",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_merchant_info_copy",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_transactions_stacked",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_2017_copy",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "transactions_stacked",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_transactions_joined_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "transactions_joined_prepared",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

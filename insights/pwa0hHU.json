@@ -1,0 +1,181 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "transactions_joined_prepared",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "RANDOM_FIXED_NB",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 2
+    },
+    "def": {
+      "type": "scatter",
+      "variant": "normal",
+      "name": "card_fico_score vs purchase_amount",
+      "userEditedName": false,
+      "genericDimension0": [],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [
+        {
+          "column": "card_fico_score",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua"
+        }
+      ],
+      "uaYDimension": [
+        {
+          "column": "purchase_amount",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "sortBy": "NATURAL",
+          "sortAscending": false,
+          "isA": "ua"
+        }
+      ],
+      "uaSize": [],
+      "uaShape": [],
+      "uaColor": [
+        {
+          "column": "authorized_flag",
+          "type": "NUMERICAL",
+          "treatAsAlphanum": false,
+          "isA": "ua",
+          "adminLevel": 0
+        }
+      ],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [
+        {
+          "filterType": "NUMERICAL_FACET",
+          "column": "purchase_amount",
+          "columnType": "NUMERICAL",
+          "maxValue": 1000.0,
+          "isA": "filter",
+          "excludedValues": {},
+          "explicitExclude": false
+        }
+      ],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#2678B1",
+        "transparency": 0.75,
+        "colorPalette": "ryg1",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.5,
+        "gridLatDeg": 0.5
+      },
+      "thumbnailData": "data:image/png;base64,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\u003d\u003d",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "OUTER_RIGHT"
+    },
+    "maxDataBytes": 157286400
+  },
+  "owner": "camillec",
+  "listed": false,
+  "name": "card_fico_score vs purchase_amount on transactions_joined_prepared",
+  "dashboardCreationId": "4K6Q4BP",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "camillec"
+    },
+    "lastModifiedOn": 1625056461880
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "camillec"
+    },
+    "lastModifiedOn": 1625056461880
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

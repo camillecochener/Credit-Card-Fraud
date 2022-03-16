@@ -1,0 +1,16 @@
+{
+  "uiData": {
+    "mode": "\u0026\u0026",
+    "conditions": [
+      {
+        "input": "authorized_flag",
+        "col": "authorized_flag",
+        "num": 1,
+        "operator": "\u003d\u003d [number]"
+      }
+    ]
+  },
+  "$status": {},
+  "distinct": false,
+  "enabled": true
+}
