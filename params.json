@@ -157,7 +157,7 @@
     },
     "dkuProperties": []
   },
-  "name": "Training Discovery - Credit Card Fraud",
+  "name": "Credit Card Fraud predictions",
   "imgPattern": 4,
   "showInitials": false,
   "metrics": {
@@ -215,11 +215,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647442709686
+    "lastModifiedOn": 1647442793579
   },
   "creationTag": {
     "versionNumber": 0,
@@ -228,7 +228,7 @@
     },
     "lastModifiedOn": 1609888961017
   },
-  "shortDesc": "The project *New CC Discovery Setup* was created by dataiku-admin on Jan 06th 2021",
+  "shortDesc": "The aim of the project is to predict credit card fraud using past transactions history.",
   "tags": [
     "imported"
   ],
