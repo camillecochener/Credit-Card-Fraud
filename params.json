@@ -158,6 +158,7 @@
     "dkuProperties": []
   },
   "name": "Credit Card Fraud predictions",
+  "projectStatus": "In use",
   "imgPattern": 4,
   "showInitials": false,
   "metrics": {
@@ -215,11 +216,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647442811536
+    "lastModifiedOn": 1647442819347
   },
   "creationTag": {
     "versionNumber": 0,
