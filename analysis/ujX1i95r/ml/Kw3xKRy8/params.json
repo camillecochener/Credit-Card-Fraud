@@ -22,7 +22,7 @@
     }
   },
   "weight": {
-    "weightMethod": "CLASS_WEIGHT"
+    "weightMethod": "SAMPLE_WEIGHT"
   },
   "time": {
     "enabled": false,
@@ -1002,6 +1002,7 @@
       },
       "authorized_flag": {
         "generate_derivative": false,
+        "missing_handling": "IMPUTE",
         "impute_constant_value": 0.0,
         "keep_regular": false,
         "quantile_bin_nb_bins": 4,
