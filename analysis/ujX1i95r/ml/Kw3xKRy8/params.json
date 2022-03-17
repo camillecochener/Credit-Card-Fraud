@@ -1216,7 +1216,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "extra_trees": {
       "n_estimators": {
@@ -1857,7 +1857,7 @@
         }
       },
       "n_jobs": 2,
-      "enabled": false
+      "enabled": true
     },
     "neural_network": {
       "layer_sizes": {
@@ -2588,7 +2588,7 @@
       "seed": 1337,
       "enable_early_stopping": true,
       "early_stopping_rounds": 4,
-      "enabled": true
+      "enabled": false
     },
     "deep_learning_sparkling": {
       "enabled": false,
