@@ -1,0 +1,67 @@
+/* Custom styling for your webapp */
+body {
+background-color: #55efc4 !important
+}
+
+#api_node {
+    margin-left:auto;
+    margin-right:auto
+}
+
+.screen {
+    text-align: left;
+    margin-top: -45%;
+    margin-left:auto;
+    margin-right:auto;
+    width:18%;
+    padding: 5% 1% 1% 1%;
+}
+
+.phone {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.input-group {
+    margin-bottom: 8%;
+}
+
+label {text-align: left}
+
+
+.form-control {
+    height:20% !important;
+    width:100% !important;
+    border-radius:3px !important
+   
+}
+
+.logo {
+    margin-left:auto;
+    margin-right:auto
+}
+.btn {
+    
+    background-color:#38ada9 !important;
+    border:none !important;
+    color: white !important
+}
+.btn:hover {
+    background-color:#079992 !important;
+    border:none !important;
+    color:white
+}
+
+#progress {
+margin-left:auto;
+margin-right:auto;
+    
+}
+
+.radial-progress__text {
+    font-size: 2rem;
+    font-weight: bold;
+  }  
+
+
+

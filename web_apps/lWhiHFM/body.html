@@ -1,0 +1,55 @@
+
+<div class="body">
+    <div class="input-group" style="margin-bottom:0%;margin-top:3%;width:100%; text-align:center">
+        <input type="text" class="form-control" id="api_node" placeholder="Path to API endpoint" style="width:25% !important"/>
+    </div>
+    
+    <div class="row" style="text-align:center">
+        <img class="phone" src="http://pluspng.com/img-png/iphone-png-png-iphone-png-740.png" width="50%" style="margin-top:1%"></img>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="screen">
+            <div style="text-align:center; margin-bottom:8%">
+                <img class ="logo" src="https://cdn-icons-png.flaticon.com/512/62/62780.png" width="25%"/>
+            </div>
+            <div class="form_screen" style="">
+            <label >Merchant Subsector</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="subsector" placeholder="Merchant Subsector"/>
+            </div>
+            <label >Merchant State</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="state" placeholder="Merchant State"/>
+            </div>
+            <label >Purchase Amount</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="amount" placeholder="Purchase Amount"/>
+            </div>
+            <label >Signature provided ?</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="signature" placeholder="Signature Provided"/>
+            </div>
+            <button class="btn btn-default predict" type="submit">Get Prediction</button>
+            </div>
+            <div class="screen_result" style="display:none; text-align:center; margin-top:20%">
+                <h5 style="margin-bottom:10%">Probability of fraud : <span id="category">Low</span></h5>
+            <div id="progress" 
+                 data-percentage="39" 
+                 data-track-width="12" 
+                 data-track-colour="555555" 
+                 data-fill-colour="2ecc71" 
+                 data-text-colour="2ecc71" 
+                 data-stroke-colour="FFFFFF" 
+                 data-stroke-spacing="4"> 
+            </div>
+            <button class="btn btn-default back" type="submit" style="margin-top:20%">Back</button>
+
+            </div>
+         
+        </div>
+        <div id="raw_query" style="display:none">
+            <h4 style="color:#353b48;margin-left:50%">Raw response</h4>
+            <textarea type="text" id="raw_container" style="height:17%; width:25%; margin-left:50%"></textarea>
+        </div>
+</div>
+    

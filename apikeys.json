@@ -1,0 +1,26 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "onBehalf": "lWhiHFM",
+    "id": "EFeBmlyyqCuTSec7",
+    "key": "9MwIsO810KTQqoteO1iiIwFFAtv1X37d",
+    "label": "Key for Web app Credit Card Fraud Application(lWhiHFM)",
+    "createdOn": 1647858463433
+  }
+]
