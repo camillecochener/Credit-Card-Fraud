@@ -6,7 +6,7 @@
       "smartId": "A-*-ujX1i95r-Kw3xKRy8-s11-pp1-m1",
       "isSelected": true,
       "color": "#1f77b4",
-      "isChampion": false
+      "isChampion": true
     },
     {
       "smartId": "A-*-ujX1i95r-Kw3xKRy8-s11-pp2-m1",
@@ -50,11 +50,11 @@
     "disabledMERunIds": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647966106869
+    "lastModifiedOn": 1647966185640
   },
   "creationTag": {
     "versionNumber": 0,
