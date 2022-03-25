@@ -25,6 +25,10 @@
     {
       "objectId": "transactions_joined_prepared",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "test",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
