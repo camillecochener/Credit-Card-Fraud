@@ -139,6 +139,26 @@
             "insightType": "saved-model_report",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 4
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "displayMode": "pdp_plot",
+              "advancedOptions": {}
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "j31Sarj",
+            "insightType": "saved-model_report",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
@@ -151,11 +171,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649165324279
+    "lastModifiedOn": 1649166618550
   },
   "creationTag": {
     "versionNumber": 0,
