@@ -79,8 +79,8 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
+              "top": 0,
+              "left": 0,
               "width": 8,
               "height": 4
             },
@@ -107,11 +107,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649165220554
+    "lastModifiedOn": 1649165221077
   },
   "creationTag": {
     "versionNumber": 0,
