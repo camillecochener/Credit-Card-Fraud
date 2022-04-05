@@ -145,16 +145,28 @@
             "box": {
               "top": 5,
               "left": 0,
-              "width": 8,
-              "height": 4
+              "width": 7,
+              "height": 5
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "pdp_plot",
-              "advancedOptions": {}
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "merchant_subsector_description",
+                    "purchase_amount",
+                    "card_age",
+                    "card_fico_score",
+                    "signature_provided",
+                    "merchant_state"
+                  ]
+                }
+              }
             },
             "autoLoad": true,
             "showTitle": "YES",
+            "title": "Partial dependence plots",
             "insightId": "j31Sarj",
             "insightType": "saved-model_report",
             "displayMode": "INSIGHT",
@@ -171,11 +183,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 17,
+    "versionNumber": 18,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649166619175
+    "lastModifiedOn": 1649166821286
   },
   "creationTag": {
     "versionNumber": 0,
