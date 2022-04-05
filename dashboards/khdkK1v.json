@@ -39,15 +39,26 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 4,
-              "left": 0,
-              "width": 8,
+              "top": 0,
+              "left": 7,
+              "width": 5,
               "height": 4
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "performance-metrics",
-              "advancedOptions": {}
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "merchant_subsector_description",
+                    "purchase_amount",
+                    "card_age",
+                    "card_fico_score",
+                    "signature_provided",
+                    "merchant_state"
+                  ]
+                }
+              }
             },
             "autoLoad": true,
             "showTitle": "YES",
@@ -75,11 +86,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649164606985
+    "lastModifiedOn": 1649164667699
   },
   "creationTag": {
     "versionNumber": 0,
