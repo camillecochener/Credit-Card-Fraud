@@ -294,13 +294,24 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 8,
-              "height": 4
+              "width": 12,
+              "height": 5
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "skins",
-              "advancedOptions": {}
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "merchant_subsector_description",
+                    "purchase_amount",
+                    "card_age",
+                    "card_fico_score",
+                    "signature_provided",
+                    "merchant_state"
+                  ]
+                }
+              }
             },
             "autoLoad": true,
             "showTitle": "YES",
@@ -320,11 +331,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 31,
+    "versionNumber": 32,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649171282071
+    "lastModifiedOn": 1649171286299
   },
   "creationTag": {
     "versionNumber": 0,
