@@ -310,11 +310,15 @@
                     "signature_provided",
                     "merchant_state"
                   ]
+                },
+                "customViews": {
+                  "viewId": "error-analysis"
                 }
               }
             },
             "autoLoad": true,
             "showTitle": "YES",
+            "title": "Model error analysis",
             "insightId": "RN1RQ1o",
             "insightType": "saved-model_report",
             "displayMode": "INSIGHT",
@@ -331,11 +335,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 32,
+    "versionNumber": 33,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649171286299
+    "lastModifiedOn": 1649171295731
   },
   "creationTag": {
     "versionNumber": 0,
