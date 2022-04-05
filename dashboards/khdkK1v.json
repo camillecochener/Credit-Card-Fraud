@@ -250,16 +250,28 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 8,
-              "height": 4
+              "width": 12,
+              "height": 5
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "skins",
-              "advancedOptions": {}
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "merchant_subsector_description",
+                    "purchase_amount",
+                    "card_age",
+                    "card_fico_score",
+                    "signature_provided",
+                    "merchant_state"
+                  ]
+                }
+              }
             },
             "autoLoad": true,
             "showTitle": "YES",
+            "title": "Model fairness report",
             "insightId": "AFKQ4r3",
             "insightType": "saved-model_report",
             "displayMode": "INSIGHT",
@@ -284,11 +296,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 27,
+    "versionNumber": 28,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649170793920
+    "lastModifiedOn": 1649170817948
   },
   "creationTag": {
     "versionNumber": 0,
