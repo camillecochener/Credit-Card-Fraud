@@ -266,6 +266,9 @@
                     "signature_provided",
                     "merchant_state"
                   ]
+                },
+                "customViews": {
+                  "viewId": "model-fairness-view"
                 }
               }
             },
@@ -296,11 +299,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 28,
+    "versionNumber": 29,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649170817948
+    "lastModifiedOn": 1649170843159
   },
   "creationTag": {
     "versionNumber": 0,
