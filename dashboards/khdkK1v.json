@@ -209,16 +209,28 @@
             "box": {
               "top": 10,
               "left": 0,
-              "width": 8,
+              "width": 12,
               "height": 4
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "interactive_scoring",
-              "advancedOptions": {}
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "merchant_subsector_description",
+                    "purchase_amount",
+                    "card_age",
+                    "card_fico_score",
+                    "signature_provided",
+                    "merchant_state"
+                  ]
+                }
+              }
             },
             "autoLoad": true,
             "showTitle": "YES",
+            "title": "Interactive scoring",
             "insightId": "nW71zaJ",
             "insightType": "saved-model_report",
             "displayMode": "INSIGHT",
@@ -235,11 +247,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 24,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649166961635
+    "lastModifiedOn": 1649166975504
   },
   "creationTag": {
     "versionNumber": 0,
