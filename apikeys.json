@@ -22,5 +22,38 @@
     "key": "9MwIsO810KTQqoteO1iiIwFFAtv1X37d",
     "label": "Key for Web app Credit Card Fraud Application(lWhiHFM)",
     "createdOn": 1647858463433
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [
+      {
+        "datasets": [],
+        "privileges": [
+          "READ_DATA",
+          "READ_METADATA",
+          "READ_SCHEMA"
+        ]
+      }
+    ],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": true,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "onBehalf": "3NKDg8D",
+    "id": "RiFbWp6Cj6ttzPmh",
+    "key": "YQfot7K1QXXsq5YbNlXd9SQlZYc0T5Sw",
+    "label": "Key for Web app Plugin skin(3NKDg8D)",
+    "createdOn": 1649169458147
   }
 ]
