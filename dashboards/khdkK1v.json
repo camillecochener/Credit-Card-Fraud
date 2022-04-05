@@ -240,6 +240,22 @@
       },
       "title": "Transparency",
       "showTitle": true
+    },
+    {
+      "id": "ewqJm9f",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Model fairness report",
+      "showTitle": false
+    },
+    {
+      "id": "D2fgV9Y",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Model error analysis",
+      "showTitle": false
     }
   ],
   "owner": "admin",
@@ -247,11 +263,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 24,
+    "versionNumber": 25,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649166975504
+    "lastModifiedOn": 1649170761830
   },
   "creationTag": {
     "versionNumber": 0,
