@@ -9,7 +9,7 @@
             "box": {
               "top": 0,
               "left": 0,
-              "width": 7,
+              "width": 6,
               "height": 4
             },
             "clickAction": "DO_NOTHING",
@@ -40,8 +40,8 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 0,
-              "left": 7,
-              "width": 5,
+              "left": 6,
+              "width": 6,
               "height": 4
             },
             "clickAction": "DO_NOTHING",
@@ -86,11 +86,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649164667699
+    "lastModifiedOn": 1649164683795
   },
   "creationTag": {
     "versionNumber": 0,
