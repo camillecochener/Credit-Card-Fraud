@@ -6,7 +6,15 @@
         "tiles": []
       },
       "title": "Robustness",
-      "showTitle": false
+      "showTitle": true
+    },
+    {
+      "id": "L3LMP9P",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Transparency",
+      "showTitle": true
     }
   ],
   "owner": "admin",
@@ -14,11 +22,11 @@
   "name": "ML reports",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649164463517
+    "lastModifiedOn": 1649164475157
   },
   "creationTag": {
     "versionNumber": 0,
