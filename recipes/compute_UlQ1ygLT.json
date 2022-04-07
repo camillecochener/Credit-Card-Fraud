@@ -46,7 +46,7 @@
       "exporterType": "exporter_microsoft-power-bi-v2_python-both-auth",
       "config": {
         "authentication_method": "oauth",
-        "export_method": "new_dataset",
+        "export_method": "overwrite",
         "buffer_size": 100,
         "workspace": "",
         "powerbi_connection": {
@@ -108,11 +108,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649341788789
+    "lastModifiedOn": 1649343645932
   },
   "creationTag": {
     "versionNumber": 0,
