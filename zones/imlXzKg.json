@@ -41,6 +41,10 @@
     {
       "objectId": "UlQ1ygLT",
       "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_UlQ1ygLT",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
