@@ -3,7 +3,81 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "clearOutputPartition": false
+    "clearOutputPartition": false,
+    "exportParams": {
+      "destinationType": "CUSTOM_MANAGED",
+      "temporaryFileBehavior": "AUTO",
+      "originatingOptionId": "python-both-auth-6c1d5d42c496b352ff162bfec7d663c0",
+      "format": {
+        "type": "csv",
+        "params": {
+          "style": "excel",
+          "charset": "utf8",
+          "separator": "\t",
+          "quoteChar": "\"",
+          "escapeChar": "\\",
+          "dateSerializationFormat": "ISO",
+          "arrayMapFormat": "json",
+          "hiveSeparators": [
+            "\u0002",
+            "\u0003",
+            "\u0004",
+            "\u0005",
+            "\u0006",
+            "\u0007",
+            "\b"
+          ],
+          "skipRowsBeforeHeader": 0,
+          "parseHeaderRow": false,
+          "skipRowsAfterHeader": 0,
+          "probableNumberOfRecords": 0,
+          "normalizeBooleans": false,
+          "normalizeDoubles": true,
+          "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+          "readMissingColumnsBehavior": "DISCARD_SILENT",
+          "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+          "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+          "fileReadFailureBehavior": "FAIL",
+          "compress": ""
+        }
+      },
+      "destinationDatasetProjectKey": "DSPIPELINEFRAUD",
+      "overwriteDestinationDataset": false,
+      "exporterType": "exporter_microsoft-power-bi-v2_python-both-auth",
+      "config": {
+        "authentication_method": "oauth",
+        "export_method": "new_dataset",
+        "buffer_size": 100,
+        "workspace": "",
+        "powerbi_connection": {
+          "mode": "PRESET",
+          "name": "Preset 1"
+        },
+        "basic_connection": {
+          "mode": "NONE"
+        },
+        "dataset": "transactions_scored"
+      },
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "selectedPartitions": [],
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    }
   },
   "customMeta": {
     "kv": {}
@@ -34,11 +108,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649341741893
+    "lastModifiedOn": 1649341788789
   },
   "creationTag": {
     "versionNumber": 0,
