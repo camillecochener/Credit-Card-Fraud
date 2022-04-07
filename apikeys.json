@@ -50,39 +50,6 @@
       "manageAdditionalDashboardUsers": false,
       "executeApp": false
     },
-    "onBehalf": "MCUlM8u",
-    "id": "rClztc0iofMP3kGZ",
-    "key": "ogvBqTniHP96WpIDJbap1YdSTEt1imF6",
-    "label": "Key for Web app Plugin skin(MCUlM8u)",
-    "createdOn": 1649321007654
-  },
-  {
-    "execSQLLike": false,
-    "localDatasets": [
-      {
-        "datasets": [],
-        "privileges": [
-          "READ_DATA",
-          "READ_METADATA",
-          "READ_SCHEMA"
-        ]
-      }
-    ],
-    "projectPrivileges": {
-      "admin": false,
-      "readProjectContent": true,
-      "writeProjectContent": false,
-      "exportDatasetsData": false,
-      "readDashboards": false,
-      "writeDashboards": false,
-      "moderateDashboards": false,
-      "shareToWorkspaces": false,
-      "runScenarios": false,
-      "manageDashboardAuthorizations": false,
-      "manageExposedElements": false,
-      "manageAdditionalDashboardUsers": false,
-      "executeApp": false
-    },
     "onBehalf": "Nx9IwDS",
     "id": "L3zdNFhesR5IQCJJ",
     "key": "52GbCdoLl4R7skGOlY8caJyADpKV2LPj",
