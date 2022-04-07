@@ -21,6 +21,7 @@
       "withinFirstN": -1,
       "maxReadUncompressedBytes": -1
     },
+    "engineType": "SQL",
     "engineParams": {
       "dssEngineMaxThreads": 4,
       "sparkSQL": {
@@ -86,11 +87,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649340853500
+    "lastModifiedOn": 1649340866425
   },
   "creationTag": {
     "versionNumber": 0,
