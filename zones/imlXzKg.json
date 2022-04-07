@@ -37,6 +37,10 @@
     {
       "objectId": "transactions_scored_massachusetts",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "UlQ1ygLT",
+      "objectType": "MANAGED_FOLDER"
     }
   ],
   "shared": [],
