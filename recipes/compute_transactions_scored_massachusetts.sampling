@@ -8,6 +8,13 @@
         "string": "Massachusetts",
         "num": 0,
         "operator": "\u003d\u003d [string]"
+      },
+      {
+        "input": "item_category",
+        "col": "authorized_flag",
+        "string": "A",
+        "num": 0,
+        "operator": "\u003d\u003d [string]"
       }
     ]
   },
