@@ -33,14 +33,6 @@
     {
       "objectId": "transactions_joined_prepared_filtered",
       "objectType": "DATASET"
-    },
-    {
-      "objectId": "final_data",
-      "objectType": "DATASET"
-    },
-    {
-      "objectId": "compute_final_data",
-      "objectType": "RECIPE"
     }
   ],
   "shared": [],
