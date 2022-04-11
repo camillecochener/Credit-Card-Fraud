@@ -86,7 +86,7 @@
               "showYAxis": true,
               "showLegend": false,
               "showTooltips": true,
-              "autoPlayAnimation": true
+              "autoPlayAnimation": false
             },
             "autoLoad": true,
             "showTitle": "YES",
@@ -130,11 +130,11 @@
   "name": "Credit Card Fraud Analytics",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 28,
+    "versionNumber": 29,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647444674557
+    "lastModifiedOn": 1649673908322
   },
   "creationTag": {
     "versionNumber": 0,
