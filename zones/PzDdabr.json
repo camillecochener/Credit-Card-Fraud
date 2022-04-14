@@ -9,6 +9,10 @@
     {
       "objectId": "dss_commits",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "dss_jobs",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
