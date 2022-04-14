@@ -1,11 +1,19 @@
 {
   "tags": {
+    "deleted-recipe-editor": {
+      "color": "#90a8b7"
+    },
     "imported": {
       "color": "#263238"
     },
-    "demo": {},
-    "fraud detection": {},
-    "recipe-editor": {},
-    "deleted-recipe-editor": {}
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
+    "fraud detection": {
+      "color": "#a088bd"
+    },
+    "demo": {
+      "color": "#94be8e"
+    }
   }
 }
