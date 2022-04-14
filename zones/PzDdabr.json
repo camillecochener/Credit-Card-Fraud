@@ -17,6 +17,10 @@
     {
       "objectId": "dss_scenario_runs",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "dss_flow_actions",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
