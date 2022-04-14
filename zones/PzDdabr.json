@@ -1,7 +1,12 @@
 {
   "name": "Monitoring",
   "color": "#465A64",
-  "items": [],
+  "items": [
+    {
+      "objectId": "dss_commits",
+      "objectType": "DATASET"
+    }
+  ],
   "shared": [],
   "tags": [],
   "customFields": {},
