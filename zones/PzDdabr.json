@@ -13,6 +13,10 @@
     {
       "objectId": "dss_jobs",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "dss_scenario_runs",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
