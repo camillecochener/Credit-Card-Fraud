@@ -5,6 +5,10 @@
     {
       "objectId": "dss_cluster_tasks",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "dss_commits",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
