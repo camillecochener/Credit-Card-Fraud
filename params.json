@@ -78,7 +78,7 @@
       "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
       "zonesGraphConnectZones": true
     },
-    "gitCommitMode": "AUTO",
+    "gitCommitMode": "ALL_EXPLICIT",
     "useRemoteGit": true,
     "disableAutomaticTriggers": false,
     "integrations": {
@@ -243,11 +243,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 51,
+    "versionNumber": 52,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1650439488915
+    "lastModifiedOn": 1650445624700
   },
   "creationTag": {
     "versionNumber": 0,
