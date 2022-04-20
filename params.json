@@ -41,7 +41,24 @@
       "exportGitRepository": false,
       "exportInsightsData": false,
       "useManualPluginsInfo": false,
-      "includedDatasetsData": [],
+      "includedDatasetsData": [
+        {
+          "name": "transactions_2018",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "transactions_2017",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "merchant_info",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "cardholder_info",
+          "type": "UploadedFiles"
+        }
+      ],
       "includedSavedModels": [],
       "includedModelEvaluationStores": [],
       "includedManagedFolders": [],
@@ -226,11 +243,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 50,
+    "versionNumber": 51,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1650383264746
+    "lastModifiedOn": 1650439488915
   },
   "creationTag": {
     "versionNumber": 0,
