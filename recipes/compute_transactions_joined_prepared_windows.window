@@ -97,8 +97,8 @@
       "value": true,
       "orderColumn": "transaction_id",
       "concatSeparator": ",",
-      "last": true,
-      "max": true,
+      "last": false,
+      "max": false,
       "firstLastNotNull": false,
       "column": "purchase_date_parsed",
       "count": false,
@@ -368,7 +368,7 @@
       "count": false,
       "$idx": 14,
       "lagValues": "1",
-      "sum": false,
+      "sum": true,
       "concat": false,
       "type": "double",
       "lead": false,
@@ -379,6 +379,7 @@
       "avg": false,
       "lag": false,
       "leadValues": "1",
+      "$selected": false,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -865,7 +866,7 @@
     {
       "windowUpperBound": 0,
       "enablePartitioning": true,
-      "enableOrdering": true,
+      "enableOrdering": false,
       "precedingRows": 0,
       "limitFollowing": false,
       "orders": [
@@ -1025,12 +1026,8 @@
             "type": "string"
           },
           {
-            "name": "purchase_date_parsed_max",
-            "type": "date"
-          },
-          {
-            "name": "purchase_date_parsed_last",
-            "type": "date"
+            "name": "purchase_amount_sum",
+            "type": "double"
           }
         ],
         "userModified": false
