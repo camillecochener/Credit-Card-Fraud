@@ -865,7 +865,7 @@
   "windows": [
     {
       "windowUpperBound": 0,
-      "enablePartitioning": true,
+      "enablePartitioning": false,
       "enableOrdering": false,
       "precedingRows": 0,
       "limitFollowing": false,
