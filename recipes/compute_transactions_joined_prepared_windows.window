@@ -98,7 +98,7 @@
       "orderColumn": "transaction_id",
       "concatSeparator": ",",
       "last": true,
-      "max": false,
+      "max": true,
       "firstLastNotNull": false,
       "column": "purchase_date_parsed",
       "count": false,
@@ -1023,6 +1023,10 @@
           {
             "name": "card_state_enName",
             "type": "string"
+          },
+          {
+            "name": "purchase_date_parsed_max",
+            "type": "date"
           },
           {
             "name": "purchase_date_parsed_last",
