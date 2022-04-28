@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1651157680959
+    "lastModifiedOn": 1651157907819
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,6 +92,7 @@
       {"name":"merchant_cardholder_distance","type":"double"},
       {"name":"card_state","type":"string"},
       {"name":"card_state_enName","type":"string"},
+      {"name":"purchase_date_parsed_max","type":"date"},
       {"name":"purchase_date_parsed_last","type":"date"}
     ],
     "userModified": true
