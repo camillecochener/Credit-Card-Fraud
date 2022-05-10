@@ -44,11 +44,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647853697586
+    "lastModifiedOn": 1652196327838
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,7 +57,9 @@
     },
     "lastModifiedOn": 1625155031423
   },
-  "tags": [],
+  "tags": [
+    "machine learning"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []

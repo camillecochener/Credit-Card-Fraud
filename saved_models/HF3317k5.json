@@ -2175,11 +2175,11 @@
   "lastTrainIndex": 1,
   "lastTrainJobId": "",
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1647860875654
+    "lastModifiedOn": 1652196327843
   },
   "creationTag": {
     "versionNumber": 0,
@@ -2188,7 +2188,9 @@
     },
     "lastModifiedOn": 1625154913041
   },
-  "tags": [],
+  "tags": [
+    "machine learning"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []
