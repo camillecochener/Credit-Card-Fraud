@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169017347
+    "lastModifiedOn": 1652169214479
   },
   "creationTag": {
     "versionNumber": 0,
@@ -194,7 +194,20 @@
   },
   "metricsChecks": {
     "runOnBuild": false,
-    "checks": [],
+    "checks": [
+      {
+        "metricId": "basic:COUNT_COLUMNS",
+        "values": [
+          "9"
+        ],
+        "type": "valueSet",
+        "meta": {
+          "name": "Value in set",
+          "label": "Column count \u003d 9"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
     "displayedState": {
       "partition": "NP",
       "checks": []
