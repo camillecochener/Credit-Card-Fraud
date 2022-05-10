@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169470785
+    "lastModifiedOn": 1652169480985
   },
   "creationTag": {
     "versionNumber": 0,
@@ -256,8 +256,10 @@
       "partition": "NP",
       "columns": [],
       "metrics": [
-        "basic:COUNT_COLUMNS",
-        "records:COUNT_RECORDS"
+        "col_stats:MEAN:card_fico_score",
+        "col_stats:MIN:purchase_amount",
+        "python:max_purchase_in_euro:Max purchase amount in €",
+        "sql_query:unique_merchants:Nb of unique merchants"
       ]
     }
   },
