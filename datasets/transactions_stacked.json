@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169242261
+    "lastModifiedOn": 1652169280701
   },
   "creationTag": {
     "versionNumber": 0,
@@ -206,12 +206,30 @@
           "label": "Column count \u003d 9"
         },
         "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "records:COUNT_RECORDS",
+        "minimum": 10000.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Record count \u003e\u003d 10k"
+        },
+        "computeOnBuildMode": "PARTITION"
       }
     ],
     "displayedState": {
       "partition": "NP",
       "checks": [
-        "Column count \u003d 9"
+        "Column count \u003d 9",
+        "Record count \u003e\u003d 10k"
       ]
     }
   },
