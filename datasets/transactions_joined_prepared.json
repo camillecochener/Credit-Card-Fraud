@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1639310715542
+    "lastModifiedOn": 1652169470785
   },
   "creationTag": {
     "versionNumber": 0,
@@ -121,7 +121,7 @@
       {
         "type": "col_stats",
         "enabled": true,
-        "computeOnBuildMode": "NO",
+        "computeOnBuildMode": "PARTITION",
         "meta": {
           "name": "Columns statistics",
           "level": 2
@@ -131,6 +131,14 @@
             {
               "column": "merchant_id",
               "aggregated": "COUNT_DISTINCT"
+            },
+            {
+              "column": "purchase_amount",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "card_fico_score",
+              "aggregated": "MEAN"
             }
           ]
         }
@@ -170,6 +178,37 @@
         },
         "configuration": {
           "aggregates": []
+        }
+      },
+      {
+        "type": "sql_query",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Nb of unique merchants",
+          "level": 9
+        },
+        "configuration": {
+          "code": "select count(distinct \"merchant_id\") as unique_merchants \nfrom ${DKU_DATASET_TABLE_NAME}\n\n",
+          "canRunOnImpala": true,
+          "singleAggregate": false,
+          "perColumn": false,
+          "columns": []
+        }
+      },
+      {
+        "type": "python",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Max purchase amount in €",
+          "level": 8
+        },
+        "configuration": {
+          "code": "def process(dataset, partition_id):\n    df \u003d dataset.get_dataframe()\n    max_purchase_amt \u003d df[\"purchase_amount\"].max()\n    max_purchase_amt_euro \u003d 0.85 * max_purchase_amt\n    return {\"max_purchase_in_euro\": max_purchase_amt_euro}\n",
+          "envSelection": {
+            "envMode": "INHERIT"
+          }
         }
       }
     ],
