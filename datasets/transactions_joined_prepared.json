@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 12,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169578760
+    "lastModifiedOn": 1652169583063
   },
   "creationTag": {
     "versionNumber": 0,
@@ -320,7 +320,11 @@
     ],
     "displayedState": {
       "partition": "NP",
-      "checks": []
+      "checks": [
+        "Avg Fico score range",
+        "Max purchase amount \u003e\u003d 40k",
+        "Purchase amount \u003e\u003d0"
+      ]
     }
   },
   "customFields": {}
