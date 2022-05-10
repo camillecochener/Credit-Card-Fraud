@@ -5,18 +5,18 @@
   "name": "Daily Fraud Scoring",
   "active": false,
   "creationTag": {
-    "versionNumber": 4,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1652169871680
-  },
-  "versionTag": {
     "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
     "lastModifiedOn": 1652170055618
+  },
+  "versionTag": {
+    "versionNumber": 6,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1652170073450
   },
   "checklists": {
     "checklists": []
@@ -208,7 +208,7 @@
             },
             {
               "type": "DATASET",
-              "itemId": "transactions_reward_value",
+              "itemId": "transactions_reward_value_by_card_id_prepared",
               "partitionsSpec": ""
             }
           ],
