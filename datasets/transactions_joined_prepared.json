@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169583063
+    "lastModifiedOn": 1652169604087
   },
   "creationTag": {
     "versionNumber": 0,
@@ -41,7 +41,10 @@
     },
     "lastModifiedOn": 1625039334383
   },
-  "tags": [],
+  "tags": [
+    "checks",
+    "metrics"
+  ],
   "params": {
     "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
     "connection": "postgre-local",
