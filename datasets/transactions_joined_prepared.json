@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169480985
+    "lastModifiedOn": 1652169578760
   },
   "creationTag": {
     "versionNumber": 0,
@@ -265,7 +265,59 @@
   },
   "metricsChecks": {
     "runOnBuild": false,
-    "checks": [],
+    "checks": [
+      {
+        "metricId": "col_stats:MIN:purchase_amount",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Purchase amount \u003e\u003d0"
+        },
+        "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "col_stats:MEAN:card_fico_score",
+        "minimum": 525.0,
+        "maximum": 650.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": true,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Avg Fico score range"
+        },
+        "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "python:max_purchase_in_euro:Max purchase amount in €",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 40000.0,
+        "minimumEnabled": false,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": true,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Max purchase amount \u003e\u003d 40k"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
     "displayedState": {
       "partition": "NP",
       "checks": []
