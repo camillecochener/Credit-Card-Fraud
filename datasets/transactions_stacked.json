@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652169230177
+    "lastModifiedOn": 1652169242261
   },
   "creationTag": {
     "versionNumber": 0,
@@ -211,7 +211,7 @@
     "displayedState": {
       "partition": "NP",
       "checks": [
-        "Value in set of basic:COUNT_COLUMNS"
+        "Column count \u003d 9"
       ]
     }
   },
