@@ -14,6 +14,8 @@
     },
     "demo": {
       "color": "#94be8e"
-    }
+    },
+    "metrics": {},
+    "checks": {}
   }
 }
