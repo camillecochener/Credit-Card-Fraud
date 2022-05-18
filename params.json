@@ -86,7 +86,7 @@
     },
     {
       "user": "user0",
-      "admin": true,
+      "admin": false,
       "readProjectContent": false,
       "writeProjectContent": true,
       "exportDatasetsData": true,
@@ -276,11 +276,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 55,
+    "versionNumber": 56,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652884014510
+    "lastModifiedOn": 1652885574382
   },
   "creationTag": {
     "versionNumber": 0,
