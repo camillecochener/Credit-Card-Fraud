@@ -19,6 +19,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "transactions_unknown_scored",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -260,11 +269,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 57,
+    "versionNumber": 58,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652885807081
+    "lastModifiedOn": 1652964014429
   },
   "creationTag": {
     "versionNumber": 0,
