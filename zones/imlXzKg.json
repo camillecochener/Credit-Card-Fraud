@@ -45,14 +45,6 @@
     {
       "objectId": "compute_UlQ1ygLT",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "compute_transactions_scored_massachusetts_copy",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "transactions_scored_massachusetts_copy",
-      "objectType": "DATASET"
     }
   ],
   "shared": [],
