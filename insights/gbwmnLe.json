@@ -1,0 +1,212 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "transactions_unknown_scored",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "def": {
+      "type": "grouped_columns",
+      "variant": "normal",
+      "name": "Avg. of purchase_amount by card_id",
+      "userEditedName": false,
+      "genericDimension0": [
+        {
+          "column": "card_id",
+          "type": "ALPHANUM",
+          "numParams": {
+            "emptyBinsMode": "ZEROS"
+          },
+          "maxValues": 20,
+          "generateOthersCategory": true,
+          "oneTickPerBin": false,
+          "filters": [],
+          "isA": "dimension",
+          "possibleSorts": [
+            {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Average of purchase_amount, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Average of purchase_amount, ascending",
+              "sortAscending": true
+            }
+          ],
+          "sort": {
+            "type": "AGGREGATION",
+            "measureIdx": 0,
+            "label": "Average of purchase_amount, descending"
+          }
+        }
+      ],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [
+        {
+          "column": "purchase_amount",
+          "function": "AVG",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0
+        }
+      ],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [],
+      "uaYDimension": [],
+      "uaSize": [],
+      "uaShape": [],
+      "uaColor": [],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "displayXAxis": true,
+      "displayYAxis": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "yCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "xCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#2678B1",
+        "transparency": 0.75,
+        "colorPalette": "default",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0,
+        "customColors": {},
+        "heatDensityMapIntensity": 0.5,
+        "heatDensityMapRadius": 0.5
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.6,
+        "gridLatDeg": 0.6
+      },
+      "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAABCZJREFUeF7t3E+IlVUYBvD3Ofc2ooUboYUUuSkCob9kmxa5lKmF/VkULQqKioIWQXuRAs2FC8OiAoOiVQuhZdGqjZKh4KZ/zqQUhFFYmNPM/Z64IXrP982Fe77jDOc9PrM8877e9zy/75yPcWBg+qo6AVS9O23OBFz5QyBgAVeeQOXb0wkWcOUJVL49nWABV55A5dvTCRZw5QlUvj2d4OsV+NY3jm4FwjPt/f+879H9lWdS1famnuAxcMDgk3i3OLG4b/71qhKofDMCFvBkAjrB3p4HnWBvYonzCjgxMG/lAvYmljivgBMD81YuYG9iifMKODEwb+UC9iaWOK+AEwPzVi5gb2KJ8wo4MTBv5QL2JpY4r4ATA/NWLmBvYonzCjgxMG/lAvYmljivgBMD81YuYG9iifMKODEwb+UC9iaWOK+AEwPzVi5gb2KJ8wo4MTBv5QL2JpY4bzIwyQDYhuhzlpb2Lh58/NfEz1b5OiTQF/ieFvDTAl4HrR4fIeAeoXlqEbAnrR6zCrhHaJ5arg0wwt4QcL698TNv7TrlKYwaZ70mwLTmMCy8HAVE+3hx/yMf1hiapz0J2JNWj1kF3CM0Ty0C9qTVY1YB9wjNU8uaAmPjjZ+1w1jYs/NPTwF5n3VNgQl7Ehb9v/UfZnagHdoI2EwsHW+v49ImtteG/KdZOLhbD8mMT966A9PsK5g9Fs2H4SHjyqvxmn3NBlsA3jm5jqXl3QKeUdds+p/0n/Z3si7/Nin6ZcO0n4NXO8G5wE0T3h0YQ+fqf3v+09m3ff1UujvBY+AQmpfi0x4+MPKJFttFWnMShm1xLb4k+VB0K9DOG6zzOjDjAoGbJmtDsAs26j4go4ad/rmAswjh+3b1D3Mbx6+q+GvPzpW1eOwqAm6ejwPCL5eBd7WADxkZvw5oX9DsdsBui/8Nvm+GF6KHYWDvcWQvtjB+JHEW4MOT6yTfAfBK69XzOWk7YHbzlXUaCR4B8dRkbcNwBFiZ68Bz+FN7bTDHc2fenF9srwt4nEgpwIbnIuDVbivjaRJ/A/ZgdLMM8ayAx4kA5Z7g9QYGhq/N9l4YfWM2uD9+r/E7And0+3nODLdEtRgcI0c74jUuk7ih3c8GJxB4X1yLUyTv6n5W87tZ2BLX2rHxFdma9QKBzd3rrTlJC3dHJ2XAb5sR7u1em3bRYJuidTbHDeGB1r5+I3H1er7yzea0WdgeXfGr7PX/75M0IL59w/JHxuGlyf5/Ef6aekXPBquq0hMQcOlCmfMJODPA0tsFXLpQ5nwCzgyw9HYBly6UOZ+AMwMsvV3ApQtlzifgzABLbxdw6UKZ8wk4M8DS2wVculDmfALODLD0dgGXLpQ5n4AzAyy9XcClC2XOJ+DMAEtvF3DpQpnzCTgzwNLbBVy6UOZ8As4MsPT2/wCGcrfLeOLktAAAAABJRU5ErkJggg\u003d\u003d",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "OUTER_RIGHT"
+    },
+    "maxDataBytes": 157286400
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Avg. of purchase_amount by card_id on transactions_unknown_scored",
+  "dashboardCreationId": "aGL2KLm",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1652964014545
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1652964014545
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
