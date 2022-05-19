@@ -8,9 +8,9 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 0,
-              "left": 0,
-              "width": 2,
-              "height": 2
+              "left": 2,
+              "width": 6,
+              "height": 3
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
@@ -26,6 +26,62 @@
             "insightType": "chart",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 2,
+              "height": 3
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "filters": [
+                {
+                  "filterType": "DATE_FACET",
+                  "column": "purchase_date_parsed",
+                  "columnType": "DATE",
+                  "dateFilterType": "RANGE",
+                  "minValue": 1.514766345E12,
+                  "maxValue": 1.525128149E12,
+                  "isA": "filter",
+                  "excludedValues": {},
+                  "isAGlobalFilter": true,
+                  "explicitExclude": false
+                }
+              ],
+              "engineType": "LINO",
+              "refreshableSelection": {
+                "selection": {
+                  "useMemTable": false,
+                  "filter": {
+                    "distinct": false,
+                    "enabled": false
+                  },
+                  "partitionSelectionMethod": "ALL",
+                  "latestPartitionsN": 1,
+                  "ordering": {
+                    "enabled": false,
+                    "rules": []
+                  },
+                  "samplingMethod": "HEAD_SEQUENTIAL",
+                  "maxRecords": 10000,
+                  "targetRatio": 0.02,
+                  "withinFirstN": -1,
+                  "maxReadUncompressedBytes": -1
+                },
+                "autoRefreshSample": false,
+                "_refreshTrigger": 0
+              },
+              "copySelectionFromScript": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "kbUzGp8",
+            "insightType": "filters",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
@@ -37,11 +93,11 @@
   "name": "Demo",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652964015126
+    "lastModifiedOn": 1652964043141
   },
   "creationTag": {
     "versionNumber": 0,
