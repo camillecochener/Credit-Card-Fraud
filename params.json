@@ -78,8 +78,8 @@
   "permissionsVersion": "LEGACY",
   "permissions": [
     {
-      "group": "data_team",
-      "admin": true,
+      "group": "MLOps",
+      "admin": false,
       "readProjectContent": false,
       "writeProjectContent": true,
       "exportDatasetsData": true,
@@ -269,11 +269,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 58,
+    "versionNumber": 59,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652964014429
+    "lastModifiedOn": 1653062549426
   },
   "creationTag": {
     "versionNumber": 0,
