@@ -81,7 +81,7 @@
       "group": "MLOps",
       "admin": false,
       "readProjectContent": false,
-      "writeProjectContent": false,
+      "writeProjectContent": true,
       "exportDatasetsData": true,
       "readDashboards": false,
       "writeDashboards": true,
@@ -269,11 +269,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 61,
+    "versionNumber": 62,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653062915634
+    "lastModifiedOn": 1653063007544
   },
   "creationTag": {
     "versionNumber": 0,
