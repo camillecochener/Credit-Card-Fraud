@@ -80,13 +80,13 @@
     {
       "group": "MLOps",
       "admin": false,
-      "readProjectContent": false,
-      "writeProjectContent": true,
-      "exportDatasetsData": true,
+      "readProjectContent": true,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
       "readDashboards": false,
       "writeDashboards": false,
       "moderateDashboards": false,
-      "shareToWorkspaces": true,
+      "shareToWorkspaces": false,
       "runScenarios": false,
       "manageDashboardAuthorizations": false,
       "manageExposedElements": false,
@@ -269,11 +269,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 59,
+    "versionNumber": 60,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653062549426
+    "lastModifiedOn": 1653062827111
   },
   "creationTag": {
     "versionNumber": 0,
