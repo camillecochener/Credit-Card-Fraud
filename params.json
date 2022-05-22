@@ -74,7 +74,7 @@
       "shareAllInputDatasets": false
     }
   },
-  "owner": "admin",
+  "owner": "user1",
   "permissionsVersion": "LEGACY",
   "permissions": [
     {
@@ -88,22 +88,6 @@
       "moderateDashboards": true,
       "shareToWorkspaces": true,
       "runScenarios": true,
-      "manageDashboardAuthorizations": false,
-      "manageExposedElements": true,
-      "manageAdditionalDashboardUsers": true,
-      "executeApp": false
-    },
-    {
-      "user": "user1",
-      "admin": false,
-      "readProjectContent": false,
-      "writeProjectContent": true,
-      "exportDatasetsData": true,
-      "readDashboards": false,
-      "writeDashboards": false,
-      "moderateDashboards": false,
-      "shareToWorkspaces": true,
-      "runScenarios": false,
       "manageDashboardAuthorizations": false,
       "manageExposedElements": true,
       "manageAdditionalDashboardUsers": true,
@@ -285,11 +269,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 67,
+    "versionNumber": 68,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653236930892
+    "lastModifiedOn": 1653237001903
   },
   "creationTag": {
     "versionNumber": 0,
