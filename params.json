@@ -94,7 +94,7 @@
       "executeApp": false
     },
     {
-      "user": "user2",
+      "group": "cc_fraud_project",
       "admin": false,
       "readProjectContent": false,
       "writeProjectContent": true,
@@ -285,11 +285,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 69,
+    "versionNumber": 70,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653237088396
+    "lastModifiedOn": 1653238015752
   },
   "creationTag": {
     "versionNumber": 0,
