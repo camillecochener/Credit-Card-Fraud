@@ -92,6 +92,22 @@
       "manageExposedElements": true,
       "manageAdditionalDashboardUsers": true,
       "executeApp": false
+    },
+    {
+      "user": "user2",
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": true,
+      "exportDatasetsData": true,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "shareToWorkspaces": true,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
     }
   ],
   "additionalDashboardUsers": {
@@ -269,11 +285,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 68,
+    "versionNumber": 69,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653237001903
+    "lastModifiedOn": 1653237088396
   },
   "creationTag": {
     "versionNumber": 0,
