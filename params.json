@@ -157,8 +157,9 @@
     },
     "codeEnvs": {
       "python": {
-        "mode": "INHERIT",
-        "preventOverride": false
+        "mode": "EXPLICIT_ENV",
+        "preventOverride": false,
+        "envName": "code_env_cc_fraud"
       },
       "r": {
         "mode": "INHERIT",
@@ -285,11 +286,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 70,
+    "versionNumber": 71,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653238015752
+    "lastModifiedOn": 1653468971873
   },
   "creationTag": {
     "versionNumber": 0,
