@@ -1,7 +1,13 @@
 {
   "tags": {
+    "analytics": {
+      "color": "#00a55a"
+    },
     "deleted-recipe-editor": {
       "color": "#90a8b7"
+    },
+    "checks": {
+      "color": "#77bec2"
     },
     "imported": {
       "color": "#263238"
@@ -12,13 +18,17 @@
     "fraud detection": {
       "color": "#a088bd"
     },
+    "metrics": {
+      "color": "#94be8e"
+    },
+    "machine learning": {
+      "color": "#28aadd"
+    },
     "demo": {
       "color": "#94be8e"
     },
-    "metrics": {},
-    "checks": {},
-    "machine learning": {},
-    "data preparation": {},
-    "analytics": {}
+    "data preparation": {
+      "color": "#a088bd"
+    }
   }
 }
