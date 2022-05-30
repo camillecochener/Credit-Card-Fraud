@@ -56,39 +56,11 @@
           "name": "transactions_unknown #2",
           "q": {
             "features": {
-              "transaction_id": 324709,
-              "purchase_date": "2018-04-16 08:26:42",
-              "purchase_date_parsed": "2018-04-16T08:26:42.000Z",
-              "purchase_year": 2018,
-              "purchase_month": 4,
-              "purchase_day": 16,
-              "purchase_dow": 1,
-              "purchase_weekend": 0,
-              "purchase_hour": 8,
-              "card_id": "C_ID_0006152db8",
-              "merchant_id": "M_ID_e2196a9ff3",
-              "merchant_category_id": 367,
-              "item_category": "D",
-              "purchase_amount": 9.36,
+              "card_id": "C_ID_64901a60b6",
+              "purchase_amount": 3.91,
               "signature_provided": 0,
-              "card_first_active_month": "2017-06",
-              "card_first_active_month_parsed": "2017-06-01T00:00:00.000Z",
-              "days_active": 319,
-              "card_reward_program": "travel",
-              "card_latitude": 43.172,
-              "card_longitude": -71.593,
-              "card_fico_score": 449,
-              "card_age": 57,
-              "merchant_subsector_description": "carpentry",
-              "merchant_latitude": 42.266,
-              "merchant_longitude": -71.783,
-              "merchant_location": "POINT(-71.783 42.266)",
-              "merchant_state": "Massachusetts",
-              "merchant_state_enName": "Massachusetts",
-              "card_location": "POINT(-71.593 43.172)",
-              "merchant_cardholder_distance": 101.93,
-              "card_state": "New Hampshire",
-              "card_state_enName": "New Hampshire"
+              "merchant_subsector_description": "luxury goods",
+              "merchant_state": "New Hampshire"
             }
           }
         },
@@ -244,11 +216,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653915610839
+    "lastModifiedOn": 1653915729780
   },
   "creationTag": {
     "versionNumber": 0,
