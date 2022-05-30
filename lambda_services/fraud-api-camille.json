@@ -233,7 +233,7 @@
         }
       ],
       "healthCheckQueries": [],
-      "returnPostEnrichData": false,
+      "returnPostEnrichData": true,
       "auditPostEnrichData": false,
       "id": "predict_fraud",
       "type": "STD_PREDICTION"
@@ -244,11 +244,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653915519738
+    "lastModifiedOn": 1653915610839
   },
   "creationTag": {
     "versionNumber": 0,
