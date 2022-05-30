@@ -39,8 +39,6 @@
               "card_reward_program": "travel",
               "card_latitude": 41.803,
               "card_longitude": -72.66,
-              "card_fico_score": 812,
-              "card_age": 20,
               "merchant_subsector_description": "insurance",
               "merchant_latitude": 41.686,
               "merchant_longitude": -73.956,
@@ -215,7 +213,25 @@
           }
         }
       ],
-      "enrichMapping": [],
+      "enrichMapping": [
+        {
+          "datasetRef": "cardholder_info_copy",
+          "packagingType": "REFERENCED",
+          "on": [
+            {
+              "inputLookupKey": "card_id",
+              "resourceLookupCol": "internal_card_mapping"
+            }
+          ],
+          "missingLookupKeyBehavior": "IGNORE",
+          "notFoundBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "columnsMapping": {
+            "fico_score": "card_fico_score",
+            "age": "card_age"
+          }
+        }
+      ],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
       "auditPostEnrichData": false,
@@ -228,11 +244,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653915079927
+    "lastModifiedOn": 1653915519738
   },
   "creationTag": {
     "versionNumber": 0,
