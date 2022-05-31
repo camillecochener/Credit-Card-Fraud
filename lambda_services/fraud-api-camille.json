@@ -213,13 +213,27 @@
     {
       "queries": [
         {
-          "inputParameters": [],
-          "query": "-- Insert your SQL code here",
+          "inputParameters": [
+            {
+              "name": "item_category_param"
+            },
+            {
+              "name": "merchant_category_id_param"
+            }
+          ],
+          "query": "-- Insert your SQL code here\n\nSELECT * FROM \"DSPIPELINEFRAUD_transactions_unknown\" WHERE item_category \u003d ? AND merchant_category_id \u003d ?;\n\nParameter names:\n    * item_category_param\n    * merchant_category_id_param",
           "postCommit": false,
           "maxResults": -1
         }
       ],
-      "testQueries": [],
+      "testQueries": [
+        {
+          "q": {
+            "item_category_param": "A",
+            "merchant_category_id_param": 299
+          }
+        }
+      ],
       "id": "sql_query",
       "type": "SQL_QUERY"
     }
@@ -229,11 +243,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654010720603
+    "lastModifiedOn": 1654010858994
   },
   "creationTag": {
     "versionNumber": 0,
