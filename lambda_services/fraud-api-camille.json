@@ -209,6 +209,19 @@
       "auditPostEnrichData": false,
       "id": "predict_fraud",
       "type": "STD_PREDICTION"
+    },
+    {
+      "queries": [
+        {
+          "inputParameters": [],
+          "query": "-- Insert your SQL code here",
+          "postCommit": false,
+          "maxResults": -1
+        }
+      ],
+      "testQueries": [],
+      "id": "sql_query",
+      "type": "SQL_QUERY"
     }
   ],
   "publicAccess": true,
@@ -216,11 +229,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653919718059
+    "lastModifiedOn": 1654010720603
   },
   "creationTag": {
     "versionNumber": 0,
