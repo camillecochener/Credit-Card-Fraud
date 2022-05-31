@@ -211,6 +211,7 @@
       "type": "STD_PREDICTION"
     },
     {
+      "connection": "postgre-local",
       "queries": [
         {
           "inputParameters": [
@@ -243,11 +244,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654010858994
+    "lastModifiedOn": 1654010882118
   },
   "creationTag": {
     "versionNumber": 0,
