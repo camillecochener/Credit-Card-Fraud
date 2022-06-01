@@ -54,7 +54,7 @@
     "main": {
       "items": [
         {
-          "ref": "data_joined",
+          "ref": "data_joined_1",
           "deps": []
         }
       ]
@@ -72,11 +72,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654086906131
+    "lastModifiedOn": 1654087226324
   },
   "creationTag": {
     "versionNumber": 0,
