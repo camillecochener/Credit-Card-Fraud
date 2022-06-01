@@ -868,7 +868,8 @@
       "limitFollowing": false,
       "followingRows": 0,
       "partitioningColumns": [
-        "card_id"
+        "card_id",
+        "authorized_flag"
       ],
       "windowLimitMode": "RANGE",
       "windowDateRangeUnit": "WEEK",
