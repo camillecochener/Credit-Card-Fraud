@@ -40,7 +40,8 @@
       "merchant_cardholder_distance": 225,
       "card_state": 120,
       "card_state_enName": 169,
-      "purchase_amount_sum": 158
+      "purchase_amount_sum": 158,
+      "rownumber": 100
     },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
@@ -111,9 +112,7 @@
           "columnType": "ALPHANUM",
           "currentMode": "ALPHANUM",
           "sort": "count",
-          "selectedValues": {
-            "C_ID_003e56029c": true
-          }
+          "selectedValues": {}
         },
         "alphanumFilter": {
           "type": "alphanum",
