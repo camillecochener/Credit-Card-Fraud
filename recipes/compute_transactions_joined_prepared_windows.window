@@ -862,16 +862,13 @@
   "windows": [
     {
       "windowUpperBound": 0,
-      "enablePartitioning": true,
-      "enableOrdering": false,
-      "precedingRows": 0,
-      "limitFollowing": false,
+      "enablePartitioning": false,
+      "enableOrdering": true,
+      "precedingRows": 1,
+      "limitFollowing": true,
       "followingRows": 0,
-      "partitioningColumns": [
-        "card_id",
-        "authorized_flag"
-      ],
-      "windowLimitMode": "RANGE",
+      "partitioningColumns": [],
+      "windowLimitMode": "ROWS",
       "windowDateRangeUnit": "WEEK",
       "orders": [
         {
@@ -881,7 +878,7 @@
       ],
       "limitPreceding": true,
       "windowLowerBound": 2,
-      "enableLimits": false
+      "enableLimits": true
     }
   ],
   "computedColumns": [],
@@ -1028,6 +1025,10 @@
           {
             "name": "purchase_amount_sum",
             "type": "double"
+          },
+          {
+            "name": "rownumber",
+            "type": "bigint"
           }
         ],
         "userModified": false
@@ -1074,6 +1075,6 @@
   "ntile": false,
   "rank": false,
   "denseRank": false,
-  "rowNumber": false,
+  "rowNumber": true,
   "outputColumnNameOverrides": {}
 }
