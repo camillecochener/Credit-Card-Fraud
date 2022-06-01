@@ -365,7 +365,7 @@
       "count": false,
       "$idx": 14,
       "lagValues": "1",
-      "sum": false,
+      "sum": true,
       "concat": false,
       "type": "double",
       "lead": false,
@@ -376,6 +376,7 @@
       "avg": false,
       "lag": false,
       "leadValues": "1",
+      "$selected": false,
       "stddev": false,
       "value": true,
       "leadDiff": false,
@@ -862,7 +863,7 @@
     {
       "windowUpperBound": 0,
       "enablePartitioning": true,
-      "enableOrdering": true,
+      "enableOrdering": false,
       "precedingRows": 0,
       "limitFollowing": false,
       "followingRows": 0,
@@ -879,7 +880,7 @@
       ],
       "limitPreceding": true,
       "windowLowerBound": 2,
-      "enableLimits": true
+      "enableLimits": false
     }
   ],
   "computedColumns": [],
@@ -1022,6 +1023,10 @@
           {
             "name": "card_state_enName",
             "type": "string"
+          },
+          {
+            "name": "purchase_amount_sum",
+            "type": "double"
           }
         ],
         "userModified": false
