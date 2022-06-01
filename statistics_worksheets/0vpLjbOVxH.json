@@ -29,16 +29,50 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "cards": [
+      {
+        "type": "pca",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0,
+          "filterVariablesWithoutValues": false
+        },
+        "columns": [
+          {
+            "name": "card_fico_score",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "card_age",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "merchant_longitude",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "merchant_latitude",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "purchase_amount",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "TuRuSqe"
+      }
+    ],
     "id": "I9KmL3V"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1649168535981
+    "lastModifiedOn": 1654082281635
   },
   "creationTag": {
     "versionNumber": 0,
