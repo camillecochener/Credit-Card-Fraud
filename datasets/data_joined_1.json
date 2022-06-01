@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654087359255
+    "lastModifiedOn": 1654087373409
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,7 +85,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"client_Id","type":"int"},
+      {"name":"client_Id","type":"string"},
       {"name":"firstname","type":"string"},
       {"name":"lastname","type":"string"},
       {"name":"age","type":"string"},
