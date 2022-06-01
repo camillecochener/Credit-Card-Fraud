@@ -25,14 +25,6 @@
     {
       "objectId": "transactions_joined_prepared",
       "objectType": "DATASET"
-    },
-    {
-      "objectId": "compute_transactions_joined_sorted",
-      "objectType": "RECIPE"
-    },
-    {
-      "objectId": "transactions_joined_sorted",
-      "objectType": "DATASET"
     }
   ],
   "shared": [],
