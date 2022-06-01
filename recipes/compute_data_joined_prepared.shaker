@@ -27,7 +27,10 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
   "steps": [],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
@@ -54,7 +57,23 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "contract_duration": 143,
+    "CSP": 204,
+    "firstname": 113,
+    "nb_diff_corresp": 128,
+    "sex": 100,
+    "nb_mn_par_corresp": 169,
+    "churn": 100,
+    "client_Id": 113,
+    "lastname": 106,
+    "recent_smartphone": 143,
+    "email_domain": 105,
+    "internet_subscription": 173,
+    "bigdata_option": 120,
+    "reason_last_call": 135,
+    "age": 100
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
