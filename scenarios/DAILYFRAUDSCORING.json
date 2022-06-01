@@ -5,18 +5,18 @@
   "name": "Daily Fraud Scoring",
   "active": false,
   "creationTag": {
-    "versionNumber": 11,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1654011045788
-  },
-  "versionTag": {
     "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
     "lastModifiedOn": 1654087917545
+  },
+  "versionTag": {
+    "versionNumber": 13,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1654088181079
   },
   "checklists": {
     "checklists": []
@@ -178,7 +178,7 @@
           ],
           "jobType": "RECURSIVE_BUILD",
           "refreshHiveMetastore": true,
-          "proceedOnFailure": false
+          "proceedOnFailure": true
         }
       },
       {
