@@ -10,7 +10,7 @@
   },
   "flowOptions": {
     "virtualizable": false,
-    "rebuildBehavior": "NORMAL",
+    "rebuildBehavior": "WRITE_PROTECT",
     "crossProjectBuildBehavior": "DEFAULT"
   },
   "readWriteOptions": {
@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1652196374690
+    "lastModifiedOn": 1654087779269
   },
   "creationTag": {
     "versionNumber": 0,
