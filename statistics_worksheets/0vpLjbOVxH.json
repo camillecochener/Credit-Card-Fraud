@@ -62,17 +62,36 @@
           }
         ],
         "id": "TuRuSqe"
+      },
+      {
+        "type": "ttest_2samp",
+        "value1": [
+          "0"
+        ],
+        "value2": [
+          "1"
+        ],
+        "confidenceLevel": 0.95,
+        "xColumn": {
+          "name": "purchase_amount",
+          "type": "CONTINUOUS"
+        },
+        "yColumn": {
+          "name": "authorized_flag",
+          "type": "CONTINUOUS"
+        },
+        "id": "VdIhUEF"
       }
     ],
     "id": "I9KmL3V"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654082281635
+    "lastModifiedOn": 1654082520697
   },
   "creationTag": {
     "versionNumber": 0,
