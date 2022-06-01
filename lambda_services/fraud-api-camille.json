@@ -222,7 +222,7 @@
               "name": "merchant_category_id_param"
             }
           ],
-          "query": "-- Insert your SQL code here\n\nSELECT * FROM \"transactions_unknown\" WHERE item_category \u003d ? AND merchant_category_id \u003d ?;\n\nParameter names:\n    * item_category_param\n    * merchant_category_id_param",
+          "query": "-- Insert your SQL code here\n\nSELECT * FROM \"DSPIPELINEFRAUD_transactions_unknown\" WHERE item_category \u003d ? AND merchant_category_id \u003d ?;\n\nParameter names:\n    * item_category_param\n    * merchant_category_id_param",
           "postCommit": false,
           "maxResults": -1
         }
@@ -244,11 +244,11 @@
     "queryKeys": []
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654010986816
+    "lastModifiedOn": 1654066806665
   },
   "creationTag": {
     "versionNumber": 0,
