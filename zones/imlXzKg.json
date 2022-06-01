@@ -45,10 +45,6 @@
     {
       "objectId": "compute_UlQ1ygLT",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "test",
-      "objectType": "DATASET"
     }
   ],
   "shared": [],
