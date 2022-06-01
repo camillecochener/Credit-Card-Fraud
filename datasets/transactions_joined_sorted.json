@@ -18,8 +18,13 @@
     "writeBuckets": 1,
     "forceSingleOutputFile": false,
     "defaultReadOrdering": {
-      "enabled": false,
-      "rules": []
+      "enabled": true,
+      "rules": [
+        {
+          "columnName": "purchase_date",
+          "asc": true
+        }
+      ]
     }
   },
   "partitioning": {
@@ -28,11 +33,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654082942425
+    "lastModifiedOn": 1654083071216
   },
   "creationTag": {
     "versionNumber": 0,
