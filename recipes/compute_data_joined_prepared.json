@@ -11,6 +11,9 @@
           "map": {
             "data_joined": {
               "repartition": 10
+            },
+            "data_joined_1": {
+              "repartition": 10
             }
           }
         },
@@ -72,11 +75,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654087226324
+    "lastModifiedOn": 1654087232789
   },
   "creationTag": {
     "versionNumber": 0,
