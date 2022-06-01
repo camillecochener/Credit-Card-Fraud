@@ -39,7 +39,12 @@
   },
   "rank": false,
   "denseRank": false,
-  "orders": [],
+  "orders": [
+    {
+      "column": "purchase_date",
+      "desc": false
+    }
+  ],
   "rowNumber": false,
   "outputColumnNameOverrides": {},
   "computedColumns": []
