@@ -156,9 +156,9 @@
       "copySelectionFromScript": true,
       "engineType": "LINO",
       "def": {
-        "type": "scatter",
+        "type": "grouped_columns",
         "variant": "normal",
-        "name": "purchase_amount vs card_fico_score",
+        "name": "New chart",
         "userEditedName": false,
         "genericDimension0": [],
         "genericDimension1": [],
@@ -167,45 +167,11 @@
         "genericMeasures": [],
         "xDimension": [],
         "yDimension": [],
-        "uaXDimension": [
-          {
-            "column": "purchase_amount",
-            "type": "NUMERICAL",
-            "treatAsAlphanum": false,
-            "sortBy": "NATURAL",
-            "sortAscending": false,
-            "isA": "ua"
-          }
-        ],
-        "uaYDimension": [
-          {
-            "column": "card_fico_score",
-            "type": "NUMERICAL",
-            "treatAsAlphanum": false,
-            "sortBy": "NATURAL",
-            "sortAscending": false,
-            "isA": "ua"
-          }
-        ],
+        "uaXDimension": [],
+        "uaYDimension": [],
         "uaSize": [],
-        "uaShape": [
-          {
-            "column": "item_category",
-            "type": "ALPHANUM",
-            "treatAsAlphanum": false,
-            "adminLevel": 0,
-            "multiplier": "Auto"
-          }
-        ],
-        "uaColor": [
-          {
-            "column": "item_category",
-            "type": "ALPHANUM",
-            "treatAsAlphanum": false,
-            "isA": "ua",
-            "adminLevel": 0
-          }
-        ],
+        "uaShape": [],
+        "uaColor": [],
         "uaTooltip": [],
         "groupDimension": [],
         "xMeasure": [],
@@ -216,7 +182,6 @@
         "tooltipMeasures": [],
         "boxplotBreakdownDim": [],
         "boxplotValue": [],
-        "filters": [],
         "axis1LogScale": false,
         "axis2LogScale": false,
         "includeZero": true,
@@ -291,10 +256,9 @@
           "lockSquareGrid": false
         },
         "mapGridOptions": {
-          "gridLonDeg": 0.5,
-          "gridLatDeg": 0.5
+          "gridLonDeg": 0.6,
+          "gridLatDeg": 0.6
         },
-        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
