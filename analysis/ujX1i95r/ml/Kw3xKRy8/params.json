@@ -3113,7 +3113,7 @@
         "maxReadUncompressedBytes": -1
       }
     },
-    "kfold": false,
+    "kfold": true,
     "nFolds": 5,
     "instanceIdRefresher": 4,
     "subSamplingSeed": 1337
