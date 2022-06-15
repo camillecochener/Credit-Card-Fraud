@@ -37,6 +37,10 @@
     {
       "objectId": "to_delete",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_to_delete",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
