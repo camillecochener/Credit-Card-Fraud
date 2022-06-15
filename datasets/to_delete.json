@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1655310498776
+    "lastModifiedOn": 1655310529698
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,8 +57,21 @@
     "readSQLDateColsAsDSSDates": true
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"card_id","type":"string"},
+      {"name":"purchase_amount_sum","type":"double"},
+      {"name":"reward_cash_back_sum","type":"double"},
+      {"name":"card_reward_program_first","type":"string"},
+      {"name":"card_fico_score_first","type":"bigint"},
+      {"name":"reward_travel_sum","type":"double"},
+      {"name":"reward_dining_entertainment_sum","type":"double"},
+      {"name":"best_reward_program","type":"string"},
+      {"name":"best_reward_amount","type":"double"},
+      {"name":"current_reward_amount","type":"double"},
+      {"name":"value_add","type":"double"},
+      {"name":"switch","type":"string"}
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
