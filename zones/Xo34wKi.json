@@ -33,6 +33,10 @@
     {
       "objectId": "transactions_joined_prepared_filtered",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "to_delete",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
