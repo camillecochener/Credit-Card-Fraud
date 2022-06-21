@@ -45,6 +45,10 @@
     {
       "objectId": "compute_UlQ1ygLT",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "train",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
