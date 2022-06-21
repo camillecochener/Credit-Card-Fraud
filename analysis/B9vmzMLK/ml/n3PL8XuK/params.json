@@ -25,9 +25,8 @@
     "weightMethod": "CLASS_WEIGHT"
   },
   "time": {
-    "enabled": true,
-    "ascending": true,
-    "timeVariable": "purchase_date_parsed"
+    "enabled": false,
+    "ascending": true
   },
   "calibration": {
     "calibrationMethod": "NO_CALIBRATION"
@@ -2924,7 +2923,7 @@
     },
     "grid_search": true,
     "gridSearchParams": {
-      "mode": "TIME_SERIES_KFOLD",
+      "mode": "KFOLD",
       "splitRatio": 0.8,
       "shuffleIterations": 1,
       "nFolds": 5,
@@ -2963,8 +2962,8 @@
   "predictionType": "BINARY_CLASSIFICATION",
   "targetVariable": "authorized_flag",
   "splitParams": {
-    "ttPolicy": "SPLIT_SINGLE_DATASET",
-    "ssdSplitMode": "SORTED",
+    "ttPolicy": "EXPLICIT_FILTERING_TWO_DATASETS",
+    "ssdSplitMode": "RANDOM",
     "splitBeforePrepare": true,
     "ssdSelection": {
       "useMemTable": false,
