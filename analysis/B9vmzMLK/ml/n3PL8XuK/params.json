@@ -2962,7 +2962,7 @@
   "predictionType": "BINARY_CLASSIFICATION",
   "targetVariable": "authorized_flag",
   "splitParams": {
-    "ttPolicy": "SPLIT_SINGLE_DATASET",
+    "ttPolicy": "EXPLICIT_FILTERING_TWO_DATASETS",
     "ssdSplitMode": "RANDOM",
     "splitBeforePrepare": true,
     "ssdSelection": {
@@ -2986,6 +2986,103 @@
     "ssdTrainingRatio": 0.8,
     "ssdSeed": 1337,
     "testOnLargerValues": true,
+    "efsdTrain": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "filter": {
+        "distinct": false,
+        "enabled": false,
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "transaction_id",
+              "operator": "\u003d\u003d [number]",
+              "col": "authorized_flag",
+              "num": 0.0
+            }
+          ]
+        }
+      }
+    },
+    "efsdTest": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    },
+    "eftdTrain": {
+      "datasetSmartName": "train",
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    },
+    "eftdTest": {
+      "datasetSmartName": "test",
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    },
     "kfold": false,
     "nFolds": 5,
     "instanceIdRefresher": 0,
