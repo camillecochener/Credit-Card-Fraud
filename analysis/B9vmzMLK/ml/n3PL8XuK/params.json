@@ -25,8 +25,9 @@
     "weightMethod": "CLASS_WEIGHT"
   },
   "time": {
-    "enabled": false,
-    "ascending": true
+    "enabled": true,
+    "ascending": true,
+    "timeVariable": "purchase_date_parsed"
   },
   "calibration": {
     "calibrationMethod": "NO_CALIBRATION"
@@ -2923,7 +2924,7 @@
     },
     "grid_search": true,
     "gridSearchParams": {
-      "mode": "KFOLD",
+      "mode": "TIME_SERIES_KFOLD",
       "splitRatio": 0.8,
       "shuffleIterations": 1,
       "nFolds": 5,
@@ -2962,8 +2963,8 @@
   "predictionType": "BINARY_CLASSIFICATION",
   "targetVariable": "authorized_flag",
   "splitParams": {
-    "ttPolicy": "EXPLICIT_FILTERING_TWO_DATASETS",
-    "ssdSplitMode": "RANDOM",
+    "ttPolicy": "SPLIT_SINGLE_DATASET",
+    "ssdSplitMode": "SORTED",
     "splitBeforePrepare": true,
     "ssdSelection": {
       "useMemTable": false,
@@ -2977,7 +2978,7 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "FULL",
       "maxRecords": 100000,
       "targetRatio": 0.02,
       "withinFirstN": -1,
