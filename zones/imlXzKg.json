@@ -53,6 +53,10 @@
     {
       "objectId": "test",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "split_transactions_known",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
