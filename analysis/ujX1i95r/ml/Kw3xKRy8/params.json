@@ -3007,8 +3007,8 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "CLASS_REBALANCE_TARGET_NB_APPROX",
-      "maxRecords": 100000,
+      "samplingMethod": "RANDOM_FIXED_NB",
+      "maxRecords": 10000,
       "targetRatio": 0.02,
       "column": "authorized_flag",
       "withinFirstN": -1,
