@@ -47,10 +47,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "split_transactions_known",
-      "objectType": "RECIPE"
-    },
-    {
       "objectId": "3mOAG6XU",
       "objectType": "SAVED_MODEL"
     }
