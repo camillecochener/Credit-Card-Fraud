@@ -28,6 +28,15 @@
         "modes": [
           "READ"
         ]
+      },
+      {
+        "objectRef": {
+          "objectId": "cardholder_info_copy",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
       }
     ]
   },
@@ -286,11 +295,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 71,
+    "versionNumber": 72,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653468971873
+    "lastModifiedOn": 1655981234167
   },
   "creationTag": {
     "versionNumber": 0,
