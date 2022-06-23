@@ -1,0 +1,29 @@
+{
+  "type": "discussions",
+  "params": {
+    "objectType": "DATASET",
+    "objectId": "cardholder_info_copy"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "discussions on cardholder_info_copy",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1655981234378
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1655981234378
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
