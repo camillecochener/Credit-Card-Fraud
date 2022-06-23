@@ -47,10 +47,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "train",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "test",
       "objectType": "DATASET"
     },
