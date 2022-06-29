@@ -53,6 +53,14 @@
     {
       "objectId": "w8iNcmPX",
       "objectType": "SAVED_MODEL"
+    },
+    {
+      "objectId": "to_delete_bis",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "score_transactions_unknown_1",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
