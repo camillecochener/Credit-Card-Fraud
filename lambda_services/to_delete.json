@@ -1,4 +1,5 @@
 {
+  "name": "to_delete",
   "endpoints": [
     {
       "modelRef": "w8iNcmPX",
@@ -12,7 +13,48 @@
         "shapleyBackgroundSize": 100
       },
       "mlFlowOutputStyle": "RAW",
-      "testQueries": [],
+      "testQueries": [
+        {
+          "name": "transactions_unknown #1",
+          "q": {
+            "features": {
+              "transaction_id": 277361,
+              "purchase_date": "2018-01-23 10:12:18",
+              "purchase_date_parsed": "2018-01-23T10:12:18.000Z",
+              "purchase_year": 2018,
+              "purchase_month": 1,
+              "purchase_day": 23,
+              "purchase_dow": 2,
+              "purchase_weekend": 0,
+              "purchase_hour": 10,
+              "card_id": "C_ID_01e7257607",
+              "merchant_id": "M_ID_85f5122bb6",
+              "merchant_category_id": 367,
+              "item_category": "A",
+              "purchase_amount": 27.35,
+              "signature_provided": 0,
+              "card_first_active_month": "2016-01",
+              "card_first_active_month_parsed": "2016-01-01T00:00:00.000Z",
+              "days_active": 753,
+              "card_reward_program": "cash_back",
+              "card_latitude": 40.481,
+              "card_longitude": -79.972,
+              "card_fico_score": 408,
+              "card_age": 52,
+              "merchant_subsector_description": "carpentry",
+              "merchant_latitude": 42.679,
+              "merchant_longitude": -73.753,
+              "merchant_location": "POINT(-73.753 42.679)",
+              "merchant_state": "New York",
+              "merchant_state_enName": "New York",
+              "card_location": "POINT(-79.972 40.481)",
+              "merchant_cardholder_distance": 571.91,
+              "card_state": "Pennsylvania",
+              "card_state_enName": "Pennsylvania"
+            }
+          }
+        }
+      ],
       "enrichMapping": [],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
@@ -31,11 +73,11 @@
     "scopeClaimKey": "scope"
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1656489478163
+    "lastModifiedOn": 1656489503595
   },
   "creationTag": {
     "versionNumber": 0,
