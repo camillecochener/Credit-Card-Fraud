@@ -1584,7 +1584,7 @@
           }
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "decision_tree_regression": {
       "max_depth": {
