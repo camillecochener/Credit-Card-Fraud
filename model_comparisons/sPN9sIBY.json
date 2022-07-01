@@ -1,21 +1,96 @@
 {
   "displayName": "Compare 8 models from Predict authorized_flag",
   "predictionType": "BINARY_CLASSIFICATION",
-  "comparedModels": [],
+  "comparedModels": [
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp1-m1",
+      "isSelected": true,
+      "color": "#1f77b4",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp5-m1",
+      "isSelected": true,
+      "color": "#ff7f0e",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp3-m1",
+      "isSelected": true,
+      "color": "#2ca02c",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp2-m1",
+      "isSelected": true,
+      "color": "#d62728",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp7-m1",
+      "isSelected": true,
+      "color": "#9467bd",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp6-m1",
+      "isSelected": true,
+      "color": "#8c564b",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp8-m1",
+      "isSelected": true,
+      "color": "#e377c2",
+      "isChampion": false
+    },
+    {
+      "smartId": "A-*-ujX1i95r-Kw3xKRy8-s15-pp9-m1",
+      "isSelected": true,
+      "color": "#7f7f7f",
+      "isChampion": false
+    }
+  ],
   "displayParams": {
-    "pinnedMetrics": [],
-    "yLabels": [],
+    "displayedMetrics": [
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "F1",
+      "COST_MATRIX",
+      "LOG_LOSS",
+      "ROC_AUC",
+      "CALIBRATION_LOSS",
+      "CUMULATIVE_LIFT"
+    ],
+    "predictionType": "BINARY_CLASSIFICATION",
+    "pinnedMetrics": [
+      "ROC_AUC"
+    ],
+    "xLabel": "model:date",
+    "yLabels": [
+      "model:algorithm",
+      "evaluation:date",
+      "evaluationDataset:dataset-name"
+    ],
     "alsoDisplayedLabels": [],
+    "barLabels": [
+      "evaluation:date",
+      "model:name",
+      "evaluationDataset:dataset-name"
+    ],
+    "graphStyle": "BAR",
+    "sortColumn": "",
     "sortDescending": false,
     "showConfidenceIntervals": true,
     "disabledMERunIds": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1656688232796
+    "lastModifiedOn": 1656688234217
   },
   "creationTag": {
     "versionNumber": 0,
