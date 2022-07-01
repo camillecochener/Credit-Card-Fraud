@@ -1302,7 +1302,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "gbt_classification": {
       "n_estimators": {
@@ -1414,7 +1414,7 @@
           }
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "gbt_regression": {
       "n_estimators": {
@@ -1584,7 +1584,7 @@
           }
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "decision_tree_regression": {
       "max_depth": {
@@ -1799,7 +1799,7 @@
       "max_iter": 1000,
       "tol": 0.001,
       "n_jobs": 2,
-      "enabled": false
+      "enabled": true
     },
     "knn": {
       "k": {
@@ -1822,7 +1822,7 @@
       "algorithm": "auto",
       "p": 2,
       "leaf_size": 30,
-      "enabled": false
+      "enabled": true
     },
     "logistic_regression": {
       "multi_class": "ovr",
@@ -1962,7 +1962,7 @@
       "coef0": 0.0,
       "tol": 0.001,
       "max_iter": -1,
-      "enabled": false
+      "enabled": true
     },
     "svm_regression": {
       "C": {
@@ -2378,7 +2378,7 @@
       "subsample": 0.9,
       "subsample_freq": 1,
       "use_bagging": false,
-      "enabled": false
+      "enabled": true
     },
     "xgboost": {
       "max_depth": {
