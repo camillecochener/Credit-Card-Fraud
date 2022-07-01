@@ -89,7 +89,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -216,7 +216,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -651,7 +651,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -779,7 +779,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": true,
@@ -802,7 +802,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -3007,7 +3007,7 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "RANDOM_FIXED_NB",
+      "samplingMethod": "FULL",
       "maxRecords": 10000,
       "targetRatio": 0.02,
       "column": "authorized_flag",
@@ -3113,7 +3113,7 @@
         "maxReadUncompressedBytes": -1
       }
     },
-    "kfold": true,
+    "kfold": false,
     "nFolds": 5,
     "instanceIdRefresher": 4,
     "subSamplingSeed": 1337
