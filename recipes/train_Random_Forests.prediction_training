@@ -109,6 +109,7 @@
     "autoOptimizeThreshold": true,
     "forcedClassifierThreshold": 0.0,
     "grid_search_params": {
+      "code": "# Define an object named cv that follows the scikit-learn splitter protocol\n# This example uses the \u0027repeated K-fold\u0027 splitter of scikit-learn\nfrom sklearn.model_selection import RepeatedKFold\n\ncv \u003d RepeatedKFold(n_splits\u003d3, n_repeats\u003d5)",
       "bayesianOptimizer": "SCIKIT_OPTIMIZE",
       "seed": 1337,
       "nIterRandom": 5,
@@ -118,7 +119,7 @@
       "shuffleIterations": 1,
       "splitRatio": 0.8,
       "timeout": 0,
-      "mode": "KFOLD",
+      "mode": "CUSTOM",
       "cvSeed": 1337,
       "nJobs": 4,
       "nIter": 0,
@@ -130,7 +131,7 @@
     "algorithm": "RANDOM_FOREST_CLASSIFICATION",
     "gridLength": 1
   },
-  "generatingModelId": "A-DSPIPELINEFRAUD-ujX1i95r-Kw3xKRy8-s11-pp1-m1",
+  "generatingModelId": "A-DSPIPELINEFRAUD-ujX1i95r-Kw3xKRy8-s13-pp1-m1",
   "preprocessing": {
     "reduce": {
       "kept_variance": 0.0,
@@ -1452,9 +1453,9 @@
     },
     "prediction_type": "BINARY_CLASSIFICATION"
   },
-  "operationMode": "TRAIN_SPLITTED_ONLY",
+  "operationMode": "TRAIN_KFOLD",
   "partSource": "ACTIVE_VERSION",
-  "modelVersionNamePrefix": "Random forest (s11)",
+  "modelVersionNamePrefix": "Random forest (s13)",
   "assertionsParams": {
     "assertions": [
       {
@@ -1528,7 +1529,7 @@
         "enabled": false
       },
       "latestPartitionsN": 1,
-      "maxRecords": 100000,
+      "maxRecords": 10000,
       "ordering": {
         "rules": [],
         "enabled": false
@@ -1538,7 +1539,7 @@
       "column": "authorized_flag",
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "CLASS_REBALANCE_TARGET_NB_APPROX"
+      "samplingMethod": "RANDOM_FIXED_NB"
     },
     "ssdTrainingRatio": 0.8,
     "eftdTest": {
@@ -1606,7 +1607,7 @@
       }
     },
     "ttPolicy": "SPLIT_SINGLE_DATASET",
-    "kfold": false
+    "kfold": true
   },
   "sparkParams": {
     "pipelineAllowMerge": true,

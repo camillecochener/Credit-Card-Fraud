@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1625056639586
+    "lastModifiedOn": 1652196327825
   },
   "creationTag": {
     "versionNumber": 0,
@@ -41,7 +41,9 @@
     },
     "lastModifiedOn": 1625056592347
   },
-  "tags": [],
+  "tags": [
+    "machine learning"
+  ],
   "params": {
     "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
     "connection": "postgre-local",

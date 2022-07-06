@@ -1,6 +1,7 @@
 {
   "type": "PostgreSQL",
   "managed": true,
+  "shortDesc": "Metrics and checks",
   "checklists": {
     "checklists": []
   },
@@ -10,7 +11,7 @@
   },
   "flowOptions": {
     "virtualizable": false,
-    "rebuildBehavior": "NORMAL",
+    "rebuildBehavior": "WRITE_PROTECT",
     "crossProjectBuildBehavior": "DEFAULT"
   },
   "readWriteOptions": {
@@ -28,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 18,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1639310715542
+    "lastModifiedOn": 1654087908175
   },
   "creationTag": {
     "versionNumber": 0,
@@ -41,7 +42,11 @@
     },
     "lastModifiedOn": 1625039334383
   },
-  "tags": [],
+  "tags": [
+    "checks",
+    "metrics",
+    "data preparation"
+  ],
   "params": {
     "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
     "connection": "postgre-local",
@@ -121,7 +126,7 @@
       {
         "type": "col_stats",
         "enabled": true,
-        "computeOnBuildMode": "NO",
+        "computeOnBuildMode": "PARTITION",
         "meta": {
           "name": "Columns statistics",
           "level": 2
@@ -131,6 +136,14 @@
             {
               "column": "merchant_id",
               "aggregated": "COUNT_DISTINCT"
+            },
+            {
+              "column": "purchase_amount",
+              "aggregated": "MIN"
+            },
+            {
+              "column": "card_fico_score",
+              "aggregated": "MEAN"
             }
           ]
         }
@@ -170,6 +183,37 @@
         },
         "configuration": {
           "aggregates": []
+        }
+      },
+      {
+        "type": "sql_query",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Nb of unique merchants",
+          "level": 9
+        },
+        "configuration": {
+          "code": "select count(distinct \"merchant_id\") as unique_merchants \nfrom ${DKU_DATASET_TABLE_NAME}\n\n",
+          "canRunOnImpala": true,
+          "singleAggregate": false,
+          "perColumn": false,
+          "columns": []
+        }
+      },
+      {
+        "type": "python",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Max purchase amount in €",
+          "level": 8
+        },
+        "configuration": {
+          "code": "def process(dataset, partition_id):\n    df \u003d dataset.get_dataframe()\n    max_purchase_amt \u003d df[\"purchase_amount\"].max()\n    max_purchase_amt_euro \u003d 0.85 * max_purchase_amt\n    return {\"max_purchase_in_euro\": max_purchase_amt_euro}\n",
+          "envSelection": {
+            "envMode": "INHERIT"
+          }
         }
       }
     ],
@@ -217,17 +261,75 @@
       "partition": "NP",
       "columns": [],
       "metrics": [
-        "basic:COUNT_COLUMNS",
-        "records:COUNT_RECORDS"
+        "col_stats:MEAN:card_fico_score",
+        "col_stats:MIN:purchase_amount",
+        "python:max_purchase_in_euro:Max purchase amount in €",
+        "sql_query:unique_merchants:Nb of unique merchants"
       ]
     }
   },
   "metricsChecks": {
     "runOnBuild": false,
-    "checks": [],
+    "checks": [
+      {
+        "metricId": "col_stats:MIN:purchase_amount",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Purchase amount \u003e\u003d0"
+        },
+        "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "col_stats:MEAN:card_fico_score",
+        "minimum": 525.0,
+        "maximum": 650.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": true,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Avg Fico score range"
+        },
+        "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "python:max_purchase_in_euro:Max purchase amount in €",
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 40000.0,
+        "minimumEnabled": false,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": true,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Max purchase amount \u003e\u003d 40k"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
     "displayedState": {
       "partition": "NP",
-      "checks": []
+      "checks": [
+        "Avg Fico score range",
+        "Max purchase amount \u003e\u003d 40k",
+        "Purchase amount \u003e\u003d0"
+      ]
     }
   },
   "customFields": {}

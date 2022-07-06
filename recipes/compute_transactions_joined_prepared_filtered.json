@@ -86,11 +86,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1625303547259
+    "lastModifiedOn": 1652196374675
   },
   "creationTag": {
     "versionNumber": 0,
@@ -99,7 +99,9 @@
     },
     "lastModifiedOn": 1625303527934
   },
-  "tags": [],
+  "tags": [
+    "analytics"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []

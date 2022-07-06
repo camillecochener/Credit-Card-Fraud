@@ -89,7 +89,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -216,7 +216,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -651,7 +651,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -779,7 +779,7 @@
         "frequency_default_mode": "EXPLICIT",
         "frequency_default_value": 0.0,
         "frequency_normalized": true,
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": true,
@@ -802,7 +802,7 @@
         "binarize_threshold_mode": "MEDIAN",
         "binarize_constant_threshold": 0.0,
         "datetime_cyclical_periods": [],
-        "role": "REJECT",
+        "role": "INPUT",
         "type": "NUMERIC",
         "state": {
           "userModified": false,
@@ -1302,7 +1302,7 @@
           "scaling": "LINEAR"
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "gbt_classification": {
       "n_estimators": {
@@ -1414,7 +1414,7 @@
           }
         }
       },
-      "enabled": false
+      "enabled": true
     },
     "gbt_regression": {
       "n_estimators": {
@@ -1799,7 +1799,7 @@
       "max_iter": 1000,
       "tol": 0.001,
       "n_jobs": 2,
-      "enabled": false
+      "enabled": true
     },
     "knn": {
       "k": {
@@ -1822,7 +1822,7 @@
       "algorithm": "auto",
       "p": 2,
       "leaf_size": 30,
-      "enabled": false
+      "enabled": true
     },
     "logistic_regression": {
       "multi_class": "ovr",
@@ -1962,7 +1962,7 @@
       "coef0": 0.0,
       "tol": 0.001,
       "max_iter": -1,
-      "enabled": false
+      "enabled": true
     },
     "svm_regression": {
       "C": {
@@ -2378,7 +2378,7 @@
       "subsample": 0.9,
       "subsample_freq": 1,
       "use_bagging": false,
-      "enabled": false
+      "enabled": true
     },
     "xgboost": {
       "max_depth": {
@@ -2928,12 +2928,13 @@
     },
     "grid_search": true,
     "gridSearchParams": {
-      "mode": "KFOLD",
+      "mode": "CUSTOM",
       "splitRatio": 0.8,
       "shuffleIterations": 1,
       "nFolds": 5,
       "cvSeed": 1337,
       "stratified": true,
+      "code": "# Define an object named cv that follows the scikit-learn splitter protocol\n# This example uses the \u0027repeated K-fold\u0027 splitter of scikit-learn\nfrom sklearn.model_selection import RepeatedKFold\n\ncv \u003d RepeatedKFold(n_splits\u003d3, n_repeats\u003d5)",
       "strategy": "GRID",
       "bayesianOptimizer": "SCIKIT_OPTIMIZE",
       "randomized": true,
@@ -3006,8 +3007,8 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "CLASS_REBALANCE_TARGET_NB_APPROX",
-      "maxRecords": 100000,
+      "samplingMethod": "FULL",
+      "maxRecords": 10000,
       "targetRatio": 0.02,
       "column": "authorized_flag",
       "withinFirstN": -1,

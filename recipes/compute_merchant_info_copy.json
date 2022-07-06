@@ -11,6 +11,9 @@
         "splitMode": "DEFAULT",
         "numberOfExecutors": 2
       },
+      "synapseParams": {
+        "usePolybase": false
+      },
       "sparkSQL": {
         "overwriteOutputSchema": false,
         "useGlobalMetastore": false,

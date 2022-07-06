@@ -1,6 +1,7 @@
 {
   "type": "PostgreSQL",
   "managed": true,
+  "shortDesc": "Metrics and checks\n",
   "checklists": {
     "checklists": []
   },
@@ -28,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 9,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1624975996950
+    "lastModifiedOn": 1652196346963
   },
   "creationTag": {
     "versionNumber": 0,
@@ -41,7 +42,11 @@
     },
     "lastModifiedOn": 1624975996928
   },
-  "tags": [],
+  "tags": [
+    "checks",
+    "metrics",
+    "data preparation"
+  ],
   "params": {
     "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
     "connection": "postgre-local",
@@ -86,12 +91,61 @@
       {
         "type": "records",
         "enabled": true,
-        "computeOnBuildMode": "NO",
+        "computeOnBuildMode": "PARTITION",
         "meta": {
           "name": "Record count",
           "level": 0
         },
         "configuration": {}
+      },
+      {
+        "type": "col_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns statistics",
+          "level": 2
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "adv_col_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Most frequent values",
+          "level": 3
+        },
+        "configuration": {
+          "aggregates": [],
+          "numberTopValues": 10
+        }
+      },
+      {
+        "type": "percentile_stats",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Columns percentiles",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
+      },
+      {
+        "type": "verify_col",
+        "enabled": false,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Data validity",
+          "level": 4
+        },
+        "configuration": {
+          "aggregates": []
+        }
       }
     ],
     "engineConfig": {
@@ -135,6 +189,7 @@
       "python": {}
     },
     "displayedState": {
+      "partition": "NP",
       "columns": [],
       "metrics": [
         "basic:COUNT_COLUMNS",
@@ -144,9 +199,43 @@
   },
   "metricsChecks": {
     "runOnBuild": false,
-    "checks": [],
+    "checks": [
+      {
+        "metricId": "basic:COUNT_COLUMNS",
+        "values": [
+          "9"
+        ],
+        "type": "valueSet",
+        "meta": {
+          "name": "Value in set",
+          "label": "Column count \u003d 9"
+        },
+        "computeOnBuildMode": "PARTITION"
+      },
+      {
+        "metricId": "records:COUNT_RECORDS",
+        "minimum": 10000.0,
+        "maximum": 0.0,
+        "softMinimum": 0.0,
+        "softMaximum": 0.0,
+        "minimumEnabled": true,
+        "maximumEnabled": false,
+        "softMinimumEnabled": false,
+        "softMaximumEnabled": false,
+        "type": "numericRange",
+        "meta": {
+          "name": "Value in range",
+          "label": "Record count \u003e\u003d 10k"
+        },
+        "computeOnBuildMode": "PARTITION"
+      }
+    ],
     "displayedState": {
-      "checks": []
+      "partition": "NP",
+      "checks": [
+        "Column count \u003d 9",
+        "Record count \u003e\u003d 10k"
+      ]
     }
   },
   "customFields": {}

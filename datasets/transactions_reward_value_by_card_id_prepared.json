@@ -10,7 +10,7 @@
   },
   "flowOptions": {
     "virtualizable": false,
-    "rebuildBehavior": "NORMAL",
+    "rebuildBehavior": "WRITE_PROTECT",
     "crossProjectBuildBehavior": "DEFAULT"
   },
   "readWriteOptions": {
@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 5,
     "lastModifiedBy": {
-      "login": "camillec"
+      "login": "admin"
     },
-    "lastModifiedOn": 1625304921571
+    "lastModifiedOn": 1654087881871
   },
   "creationTag": {
     "versionNumber": 0,
@@ -41,7 +41,9 @@
     },
     "lastModifiedOn": 1625304485453
   },
-  "tags": [],
+  "tags": [
+    "analytics"
+  ],
   "params": {
     "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
     "connection": "postgre-local",

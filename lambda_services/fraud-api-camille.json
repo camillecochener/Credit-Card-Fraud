@@ -1,0 +1,266 @@
+{
+  "authMethod": "PUBLIC",
+  "authRealm": {
+    "queryKeys": []
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1653902056849,
+    "versionNumber": 0
+  },
+  "customFields": {},
+  "endpoints": [
+    {
+      "auditPostEnrichData": false,
+      "enrichMapping": [
+        {
+          "columnsMapping": {
+            "age": "card_age",
+            "fico_score": "card_fico_score"
+          },
+          "datasetRef": "cardholder_info_copy",
+          "missingLookupKeyBehavior": "IGNORE",
+          "multiMatchBehavior": "KEEP_FIRST",
+          "notFoundBehavior": "IGNORE",
+          "on": [
+            {
+              "inputLookupKey": "card_id",
+              "resourceLookupCol": "internal_card_mapping"
+            }
+          ],
+          "packagingType": "REFERENCED"
+        }
+      ],
+      "healthCheckQueries": [],
+      "id": "predict_fraud",
+      "individualExplanationParams": {
+        "drawInScoredSet": false,
+        "method": "ICE",
+        "nbExplanations": 3,
+        "shapleyBackgroundSize": 100,
+        "subChunkSize": 5000
+      },
+      "mlFlowOutputStyle": "RAW",
+      "modelRef": "HF3317k5",
+      "outputExplanations": false,
+      "returnPostEnrichData": true,
+      "testQueries": [
+        {
+          "name": "transactions_unknown #1",
+          "q": {
+            "features": {
+              "card_first_active_month": "2015-08",
+              "card_first_active_month_parsed": "2015-08-01T00:00:00.000Z",
+              "card_id": "C_ID_0002709b5a",
+              "card_latitude": 41.803,
+              "card_location": "POINT(-72.66 41.803)",
+              "card_longitude": -72.66,
+              "card_reward_program": "travel",
+              "card_state": "Connecticut",
+              "card_state_enName": "Connecticut",
+              "days_active": 900,
+              "item_category": "C",
+              "merchant_cardholder_distance": 108.31,
+              "merchant_category_id": 298,
+              "merchant_id": "M_ID_550f11f3df",
+              "merchant_latitude": 41.686,
+              "merchant_location": "POINT(-73.956 41.686)",
+              "merchant_longitude": -73.956,
+              "merchant_state": "New York",
+              "merchant_state_enName": "New York",
+              "merchant_subsector_description": "insurance",
+              "purchase_amount": 337.3,
+              "purchase_date": "2018-01-17 08:09:41",
+              "purchase_date_parsed": "2018-01-17T08:09:41.000Z",
+              "purchase_day": 17,
+              "purchase_dow": 3,
+              "purchase_hour": 8,
+              "purchase_month": 1,
+              "purchase_weekend": 0,
+              "purchase_year": 2018,
+              "signature_provided": 0,
+              "transaction_id": 270986
+            }
+          }
+        },
+        {
+          "name": "transactions_unknown #2",
+          "q": {
+            "features": {
+              "card_id": "C_ID_64901a60b6",
+              "merchant_state": "New Hampshire",
+              "merchant_subsector_description": "luxury goods",
+              "purchase_amount": 3.91,
+              "signature_provided": 0
+            }
+          }
+        },
+        {
+          "name": "transactions_unknown #3",
+          "q": {
+            "features": {
+              "card_age": 30,
+              "card_fico_score": 831,
+              "card_first_active_month": "2017-10",
+              "card_first_active_month_parsed": "2017-10-01T00:00:00.000Z",
+              "card_id": "C_ID_00079fec55",
+              "card_latitude": 42.646,
+              "card_location": "POINT(-73.758 42.646)",
+              "card_longitude": -73.758,
+              "card_reward_program": "dining_entertainment",
+              "card_state": "New York",
+              "card_state_enName": "New York",
+              "days_active": 96,
+              "item_category": "C",
+              "merchant_cardholder_distance": 192.52,
+              "merchant_category_id": 130,
+              "merchant_id": "M_ID_e5374dabc0",
+              "merchant_latitude": 43.218,
+              "merchant_location": "POINT(-71.526 43.218)",
+              "merchant_longitude": -71.526,
+              "merchant_state": "New Hampshire",
+              "merchant_state_enName": "New Hampshire",
+              "merchant_subsector_description": "luxury goods",
+              "purchase_amount": 8.72,
+              "purchase_date": "2018-01-05 11:18:37",
+              "purchase_date_parsed": "2018-01-05T11:18:37.000Z",
+              "purchase_day": 5,
+              "purchase_dow": 5,
+              "purchase_hour": 11,
+              "purchase_month": 1,
+              "purchase_weekend": 0,
+              "purchase_year": 2018,
+              "signature_provided": 0,
+              "transaction_id": 258838
+            }
+          }
+        },
+        {
+          "name": "transactions_unknown #4",
+          "q": {
+            "features": {
+              "card_age": 28,
+              "card_fico_score": 820,
+              "card_first_active_month": "2017-05",
+              "card_first_active_month_parsed": "2017-05-01T00:00:00.000Z",
+              "card_id": "C_ID_0007fe3157",
+              "card_latitude": 42.268,
+              "card_location": "POINT(-71.791 42.268)",
+              "card_longitude": -71.791,
+              "card_reward_program": "cash_back",
+              "card_state": "Massachusetts",
+              "card_state_enName": "Massachusetts",
+              "days_active": 257,
+              "item_category": "B",
+              "merchant_cardholder_distance": 108.47,
+              "merchant_category_id": 309,
+              "merchant_id": "M_ID_bf77cc64a0",
+              "merchant_latitude": 43.229,
+              "merchant_location": "POINT(-71.563 43.229)",
+              "merchant_longitude": -71.563,
+              "merchant_state": "New Hampshire",
+              "merchant_state_enName": "New Hampshire",
+              "merchant_subsector_description": "flights",
+              "purchase_amount": 559.88,
+              "purchase_date": "2018-01-13 15:51:43",
+              "purchase_date_parsed": "2018-01-13T15:51:43.000Z",
+              "purchase_day": 13,
+              "purchase_dow": 6,
+              "purchase_hour": 15,
+              "purchase_month": 1,
+              "purchase_weekend": 1,
+              "purchase_year": 2018,
+              "signature_provided": 0,
+              "transaction_id": 267550
+            }
+          }
+        },
+        {
+          "name": "transactions_unknown #5",
+          "q": {
+            "features": {
+              "card_age": 28,
+              "card_fico_score": 820,
+              "card_first_active_month": "2017-05",
+              "card_first_active_month_parsed": "2017-05-01T00:00:00.000Z",
+              "card_id": "C_ID_0007fe3157",
+              "card_latitude": 42.268,
+              "card_location": "POINT(-71.791 42.268)",
+              "card_longitude": -71.791,
+              "card_reward_program": "cash_back",
+              "card_state": "Massachusetts",
+              "card_state_enName": "Massachusetts",
+              "days_active": 300,
+              "item_category": "D",
+              "merchant_cardholder_distance": 8.16,
+              "merchant_category_id": 195,
+              "merchant_id": "M_ID_4c51c0dee0",
+              "merchant_latitude": 42.209,
+              "merchant_location": "POINT(-71.85 42.209)",
+              "merchant_longitude": -71.85,
+              "merchant_state": "Massachusetts",
+              "merchant_state_enName": "Massachusetts",
+              "merchant_subsector_description": "gas",
+              "purchase_amount": 39.53,
+              "purchase_date": "2018-02-25 10:43:08",
+              "purchase_date_parsed": "2018-02-25T10:43:08.000Z",
+              "purchase_day": 25,
+              "purchase_dow": 7,
+              "purchase_hour": 10,
+              "purchase_month": 2,
+              "purchase_weekend": 1,
+              "purchase_year": 2018,
+              "signature_provided": 0,
+              "transaction_id": 309813
+            }
+          }
+        }
+      ],
+      "type": "STD_PREDICTION",
+      "useJava": true
+    },
+    {
+      "connection": "postgre-local",
+      "id": "sql_query",
+      "queries": [
+        {
+          "inputParameters": [
+            {
+              "name": "item_category_param"
+            },
+            {
+              "name": "merchant_category_id_param"
+            }
+          ],
+          "maxResults": -1,
+          "postCommit": false,
+          "query": "-- Insert your SQL code here\n\nSELECT * FROM \"DSPIPELINEFRAUD_transactions_unknown\" WHERE item_category = ? AND merchant_category_id = ?;\n\nParameter names:\n    * item_category_param\n    * merchant_category_id_param"
+        }
+      ],
+      "testQueries": [
+        {
+          "q": {
+            "item_category_param": "A",
+            "merchant_category_id_param": 299
+          }
+        }
+      ],
+      "type": "SQL_QUERY"
+    }
+  ],
+  "name": "fraud-api-camille",
+  "publicAccess": true,
+  "tags": [],
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1654075556117,
+    "versionNumber": 14
+  }
+}

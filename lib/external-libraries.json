@@ -1,7 +1,19 @@
 {
-  "gitReferences": {},
+  "gitReferences": {
+    "python/Augmentor": {
+      "remote": "git@github.com:mdbloice/Augmentor.git",
+      "checkout": "refs/heads/master",
+      "remotePath": "Augmentor",
+      "lastHash": "daf4478ea34c3504d1a26c22721f8558de4da22b",
+      "conflictingFiles": [],
+      "resolvedFiles": [],
+      "faultyHash": "",
+      "isDirty": false
+    }
+  },
   "pythonPath": [
-    "python"
+    "python",
+    "python/Augmentor"
   ],
   "rsrcPath": [
     "R"

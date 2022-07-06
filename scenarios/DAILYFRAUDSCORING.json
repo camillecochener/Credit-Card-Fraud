@@ -1,0 +1,244 @@
+{
+  "projectKey": "DSPIPELINEFRAUD",
+  "id": "DAILYFRAUDSCORING",
+  "type": "step_based",
+  "name": "Daily Fraud Scoring",
+  "active": false,
+  "creationTag": {
+    "versionNumber": 13,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1654088181079
+  },
+  "versionTag": {
+    "versionNumber": 14,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1654088185516
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [
+    {
+      "id": "dHcrTAlw",
+      "type": "temporal",
+      "name": "Daily 2AM",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "repeatFrequency": 1,
+        "frequency": "Daily",
+        "startingFrom": "2022-05-10T08:03:00.000Z",
+        "daysOfWeek": [
+          "Tuesday"
+        ],
+        "minute": 0,
+        "hour": 2,
+        "timezone": "SERVER"
+      }
+    }
+  ],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "mail-scenario",
+        "configuration": {
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "sendAsHTML": false,
+          "attachments": [],
+          "messageSource": "TEMPLATE_FILE",
+          "templateFormat": "FREEMARKER",
+          "templateName": "default.ftl"
+        }
+      },
+      "id": "snpQ0aoT",
+      "name": "Mail Report",
+      "runConditionEnabled": true,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
+  "params": {
+    "steps": [
+      {
+        "id": "build_2_true_d_transactions_stacked",
+        "type": "build_flowitem",
+        "name": "Step #2",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "transactions_stacked",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "cardholder_info_copy",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "merchant_info_copy",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_FORCED_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "comp_metrics_d_transactions_stacked",
+        "type": "compute_metrics",
+        "name": "Step #1",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "computes": [
+            {
+              "type": "DATASET",
+              "itemId": "transactions_stacked",
+              "partitionsSpec": ""
+            }
+          ],
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "check_false_d_transactions_stacked",
+        "type": "check_dataset",
+        "name": "Step #3",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "checks": [
+            {
+              "type": "DATASET",
+              "itemId": "transactions_stacked",
+              "partitionsSpec": ""
+            }
+          ],
+          "warningsAsErrors": false,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_transactions_joined_prepared",
+        "type": "build_flowitem",
+        "name": "Step #4",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "transactions_joined_prepared",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": true
+        }
+      },
+      {
+        "id": "check_false_d_transactions_joined_prepared",
+        "type": "check_dataset",
+        "name": "Step #5",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "checks": [
+            {
+              "type": "DATASET",
+              "itemId": "transactions_joined_prepared",
+              "partitionsSpec": ""
+            }
+          ],
+          "warningsAsErrors": false,
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "build_0_true_d_transactions_unknown_scored",
+        "type": "build_flowitem",
+        "name": "Step #6",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "transactions_unknown_scored",
+              "partitionsSpec": ""
+            },
+            {
+              "type": "DATASET",
+              "itemId": "transactions_reward_value_by_card_id_prepared",
+              "partitionsSpec": ""
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
+      }
+    ]
+  },
+  "automationLocal": false,
+  "customFields": {}
+}

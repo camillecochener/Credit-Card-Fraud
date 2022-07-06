@@ -11,6 +11,7 @@
       },
       "latestPartitionsN": 1,
       "maxRecords": 10000,
+      "maxRecordsForDisplay": -1,
       "ordering": {
         "rules": [],
         "enabled": false
@@ -96,6 +97,24 @@
   "previewMode": "ALL_ROWS",
   "vizSampling": {
     "_refreshTrigger": 0,
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "FULL"
+    },
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
