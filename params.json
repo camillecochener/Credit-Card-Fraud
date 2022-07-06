@@ -236,7 +236,7 @@
     },
     "dkuProperties": []
   },
-  "name": "Credit Card Fraud predictions",
+  "name": "Credit Card Fraud predictions (Camille)",
   "imgPattern": 4,
   "showInitials": false,
   "metrics": {
@@ -294,11 +294,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 75,
+    "versionNumber": 76,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1657095813878
+    "lastModifiedOn": 1657095837684
   },
   "creationTag": {
     "versionNumber": 0,
@@ -308,7 +308,7 @@
     "lastModifiedOn": 1609888961017
   },
   "description": "The purpose of this project is to detect fraud in banking transactions made with credit cards. \n\nAt our disposal, we have :\n- a history of bank transactions\n- a description of the merchants\n- a description of the credit card holders\n\nThe final product can take two different forms: \n- a dashboard that would be updated daily and feed into analysts\u0027 reports \n- an API that would predict in real time if a transaction is a fraud",
-  "shortDesc": "The aim of the project is to predict credit card fraud using past transactions history.",
+  "shortDesc": "The aim of the project is to predict credit card fraud using past transactions history.\nThe project *CREDIT_CARD_FRAUD_PREDICTIONS_CAMILLE* was copied from *DSPIPELINEFRAUD* by Administrator on juil. 06th 2022",
   "tags": [
     "demo",
     "fraud detection",
