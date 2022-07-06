@@ -83,7 +83,7 @@
       "shareAllInputDatasets": false
     }
   },
-  "owner": "user1",
+  "owner": "admin",
   "permissionsVersion": "LEGACY",
   "permissions": [
     {
@@ -129,7 +129,7 @@
       "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
       "zonesGraphConnectZones": true
     },
-    "gitCommitMode": "ALL_EXPLICIT",
+    "gitCommitMode": "AUTO",
     "useRemoteGit": true,
     "disableAutomaticTriggers": false,
     "integrations": {
@@ -237,7 +237,6 @@
     "dkuProperties": []
   },
   "name": "Credit Card Fraud predictions",
-  "projectStatus": "In use",
   "imgPattern": 4,
   "showInitials": false,
   "metrics": {
@@ -295,11 +294,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 73,
+    "versionNumber": 75,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1657094651296
+    "lastModifiedOn": 1657095813878
   },
   "creationTag": {
     "versionNumber": 0,
@@ -312,7 +311,8 @@
   "shortDesc": "The aim of the project is to predict credit card fraud using past transactions history.",
   "tags": [
     "demo",
-    "fraud detection"
+    "fraud detection",
+    "duplicated"
   ],
   "customFields": {},
   "checklists": {

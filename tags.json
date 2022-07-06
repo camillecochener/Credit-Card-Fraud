@@ -3,6 +3,9 @@
     "analytics": {
       "color": "#00a55a"
     },
+    "duplicated": {
+      "color": "#3A85AD"
+    },
     "deleted-recipe-editor": {
       "color": "#90a8b7"
     },
